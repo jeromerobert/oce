@@ -333,36 +333,55 @@ void OpenGl_FontMgr::render_text( const Standard_Integer id, const char* text)
     glPushMatrix();
 
     glScalef( _XCurrentScale, _YCurrentScale, 1 );
-    glPushAttrib( GL_ENABLE_BIT );
 
-    GLboolean enableTexture = glIsEnabled(GL_TEXTURE_2D);
-    GLboolean enableDepthTest = glIsEnabled(GL_DEPTH_TEST);
+    /*
+    glPushAttrib is called again within ftgl with the correct options so it is
+    really not necessary  to be called  twice since it is  expensive  for  the
+    rendering pipe. GL_TEXTURE_2D  and  GL_DEPTH_TEST  flags  are enabled from
+    within  ftgl so  there  is no real  reason to enable  them again. This fix
+    addresses  issues  when  the  Z  buffer   management   is   set   to  auto
+    (V3d_Viewer::SetZBufferManagment) and there are no facets contained within
+    the view (ZBufferManagment disabled).In this above case text rendering was
+    not correct.
+    */
 
-    if( !enableTexture )
-      glEnable(GL_TEXTURE_2D);
-    if( !enableDepthTest )
-      glEnable(GL_DEPTH_TEST);
+    //glPushAttrib( GL_ENABLE_BIT );
+    //GLboolean enableTexture = glIsEnabled(GL_TEXTURE_2D);
+    //GLboolean enableDepthTest = glIsEnabled(GL_DEPTH_TEST);
+    //if( !enableTexture )
+    //  glEnable(GL_TEXTURE_2D);
+    //if( !enableDepthTest )
+    //  glEnable(GL_DEPTH_TEST);
 
-    GLint* param = new GLint;    
-    glGetTexEnviv(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, param);
+    /*faster and better*/
+    static GLint param; // = new GLint;
+    
+    /*
+    still not sure why GL_REPLACE is used so leave it as is in order to not
+    introduce any regressions.
+    */
+    glGetTexEnviv(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, &param);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
 
-    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE); 
-    glAlphaFunc(GL_GEQUAL, 0.285f);    
-    glEnable(GL_ALPHA_TEST);   
+    /*alpha management is being treated from within ftgl (no need to be adjusted here)*/
+    //glAlphaFunc(GL_GEQUAL, 0.285f);
+    //glEnable(GL_ALPHA_TEST);
+
     OGLFont_Cache cache = _FontCache.Find( id );
     cache.Font->Render( text );
 
-    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, *param);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, param);
 
-    if( !enableTexture )
-      glDisable(GL_TEXTURE_2D);
-    if( !enableDepthTest )
-      glDisable(GL_DEPTH_TEST);
+    //if( !enableTexture )
+    //  glDisable(GL_TEXTURE_2D);
+    //if( !enableDepthTest )
+    //  glDisable(GL_DEPTH_TEST);
 
-    delete param;
+    //delete param;
 
-    glPopAttrib();
-    glMatrixMode( GL_MODELVIEW );
+    //glPopAttrib();
+    //glMatrixMode( GL_MODELVIEW );
+
     glPopMatrix();
   }
 
