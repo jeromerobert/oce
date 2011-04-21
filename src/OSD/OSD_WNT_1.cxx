@@ -357,6 +357,8 @@ _TINT MsgBox ( HWND hParent,
                LPMB_DESC lpChildren
              )
 {
+  int res = -1;
+
   WORD            *p = NULL, *pDlgTemplate = NULL, *pX, *pY,
                   *pWidth, *pHeight, *pItemsCount;
   int             nchar;
@@ -527,7 +529,6 @@ _TINT MsgBox ( HWND hParent,
   }  // __try
   /*----------------------------------------------------------------------*/
   __finally {
-    int res = -1;
     if ( pDlgTemplate )
       res = DialogBoxIndirect (
               GetModuleHandle(NULL),
@@ -538,8 +539,8 @@ _TINT MsgBox ( HWND hParent,
 
     if ( hDisp ) DeleteDC ( hDisp );
     if ( pDlgTemplate ) LocalFree (LocalHandle (pDlgTemplate));
-    return ( res );
   }
+  return ( res );
 
 }
 
