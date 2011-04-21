@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{C134BE1D-5C27-4847-BEBA-330143077F45}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TKernel.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKMath.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKAdvTools.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TKernel">
+			<MSBuild Projects="TKernel.cbproj"/>
+		</Target>
+		<Target Name="TKernel:Clean">
+			<MSBuild Projects="TKernel.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKernel:Make">
+			<MSBuild Projects="TKernel.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKMath">
+			<MSBuild Projects="TKMath.cbproj"/>
+		</Target>
+		<Target Name="TKMath:Clean">
+			<MSBuild Projects="TKMath.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKMath:Make">
+			<MSBuild Projects="TKMath.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKAdvTools">
+			<MSBuild Projects="TKAdvTools.cbproj"/>
+		</Target>
+		<Target Name="TKAdvTools:Clean">
+			<MSBuild Projects="TKAdvTools.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKAdvTools:Make">
+			<MSBuild Projects="TKAdvTools.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TKernel;TKMath;TKAdvTools"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TKernel:Clean;TKMath:Clean;TKAdvTools:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TKernel:Make;TKMath:Make;TKAdvTools:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

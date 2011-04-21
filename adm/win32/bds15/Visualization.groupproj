@@ -1,0 +1,108 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8231379A-5844-473C-8222-657741F71FF6}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TKService.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKV2d.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKV3d.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKOpenGl.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKMeshVS.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKNIS.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKVoxel.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TKService">
+			<MSBuild Projects="TKService.cbproj"/>
+		</Target>
+		<Target Name="TKService:Clean">
+			<MSBuild Projects="TKService.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKService:Make">
+			<MSBuild Projects="TKService.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKV2d">
+			<MSBuild Projects="TKV2d.cbproj"/>
+		</Target>
+		<Target Name="TKV2d:Clean">
+			<MSBuild Projects="TKV2d.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKV2d:Make">
+			<MSBuild Projects="TKV2d.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKV3d">
+			<MSBuild Projects="TKV3d.cbproj"/>
+		</Target>
+		<Target Name="TKV3d:Clean">
+			<MSBuild Projects="TKV3d.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKV3d:Make">
+			<MSBuild Projects="TKV3d.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKOpenGl">
+			<MSBuild Projects="TKOpenGl.cbproj"/>
+		</Target>
+		<Target Name="TKOpenGl:Clean">
+			<MSBuild Projects="TKOpenGl.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKOpenGl:Make">
+			<MSBuild Projects="TKOpenGl.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKMeshVS">
+			<MSBuild Projects="TKMeshVS.cbproj"/>
+		</Target>
+		<Target Name="TKMeshVS:Clean">
+			<MSBuild Projects="TKMeshVS.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKMeshVS:Make">
+			<MSBuild Projects="TKMeshVS.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKNIS">
+			<MSBuild Projects="TKNIS.cbproj"/>
+		</Target>
+		<Target Name="TKNIS:Clean">
+			<MSBuild Projects="TKNIS.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKNIS:Make">
+			<MSBuild Projects="TKNIS.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKVoxel">
+			<MSBuild Projects="TKVoxel.cbproj"/>
+		</Target>
+		<Target Name="TKVoxel:Clean">
+			<MSBuild Projects="TKVoxel.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKVoxel:Make">
+			<MSBuild Projects="TKVoxel.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TKService;TKV2d;TKV3d;TKOpenGl;TKMeshVS;TKNIS;TKVoxel"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TKService:Clean;TKV2d:Clean;TKV3d:Clean;TKOpenGl:Clean;TKMeshVS:Clean;TKNIS:Clean;TKVoxel:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TKService:Make;TKV2d:Make;TKV3d:Make;TKOpenGl:Make;TKMeshVS:Make;TKNIS:Make;TKVoxel:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

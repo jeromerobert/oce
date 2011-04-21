@@ -1,0 +1,192 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{BD43555C-6713-454E-97C8-D78AE36C7E31}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TKVRML.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKSTL.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXSBase.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXCAFSchema.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXmlXCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKBinXCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKSTEPBase.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKIGES.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKSTEPAttr.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKSTEP209.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXDEIGES.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKSTEP.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXDESTEP.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TKVRML">
+			<MSBuild Projects="TKVRML.cbproj"/>
+		</Target>
+		<Target Name="TKVRML:Clean">
+			<MSBuild Projects="TKVRML.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKVRML:Make">
+			<MSBuild Projects="TKVRML.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXCAF">
+			<MSBuild Projects="TKXCAF.cbproj"/>
+		</Target>
+		<Target Name="TKXCAF:Clean">
+			<MSBuild Projects="TKXCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXCAF:Make">
+			<MSBuild Projects="TKXCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKSTL">
+			<MSBuild Projects="TKSTL.cbproj"/>
+		</Target>
+		<Target Name="TKSTL:Clean">
+			<MSBuild Projects="TKSTL.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKSTL:Make">
+			<MSBuild Projects="TKSTL.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXSBase">
+			<MSBuild Projects="TKXSBase.cbproj"/>
+		</Target>
+		<Target Name="TKXSBase:Clean">
+			<MSBuild Projects="TKXSBase.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXSBase:Make">
+			<MSBuild Projects="TKXSBase.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXCAFSchema">
+			<MSBuild Projects="TKXCAFSchema.cbproj"/>
+		</Target>
+		<Target Name="TKXCAFSchema:Clean">
+			<MSBuild Projects="TKXCAFSchema.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXCAFSchema:Make">
+			<MSBuild Projects="TKXCAFSchema.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXmlXCAF">
+			<MSBuild Projects="TKXmlXCAF.cbproj"/>
+		</Target>
+		<Target Name="TKXmlXCAF:Clean">
+			<MSBuild Projects="TKXmlXCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXmlXCAF:Make">
+			<MSBuild Projects="TKXmlXCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKBinXCAF">
+			<MSBuild Projects="TKBinXCAF.cbproj"/>
+		</Target>
+		<Target Name="TKBinXCAF:Clean">
+			<MSBuild Projects="TKBinXCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKBinXCAF:Make">
+			<MSBuild Projects="TKBinXCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKSTEPBase">
+			<MSBuild Projects="TKSTEPBase.cbproj"/>
+		</Target>
+		<Target Name="TKSTEPBase:Clean">
+			<MSBuild Projects="TKSTEPBase.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKSTEPBase:Make">
+			<MSBuild Projects="TKSTEPBase.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKIGES">
+			<MSBuild Projects="TKIGES.cbproj"/>
+		</Target>
+		<Target Name="TKIGES:Clean">
+			<MSBuild Projects="TKIGES.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKIGES:Make">
+			<MSBuild Projects="TKIGES.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKSTEPAttr">
+			<MSBuild Projects="TKSTEPAttr.cbproj"/>
+		</Target>
+		<Target Name="TKSTEPAttr:Clean">
+			<MSBuild Projects="TKSTEPAttr.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKSTEPAttr:Make">
+			<MSBuild Projects="TKSTEPAttr.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKSTEP209">
+			<MSBuild Projects="TKSTEP209.cbproj"/>
+		</Target>
+		<Target Name="TKSTEP209:Clean">
+			<MSBuild Projects="TKSTEP209.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKSTEP209:Make">
+			<MSBuild Projects="TKSTEP209.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXDEIGES">
+			<MSBuild Projects="TKXDEIGES.cbproj"/>
+		</Target>
+		<Target Name="TKXDEIGES:Clean">
+			<MSBuild Projects="TKXDEIGES.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXDEIGES:Make">
+			<MSBuild Projects="TKXDEIGES.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKSTEP">
+			<MSBuild Projects="TKSTEP.cbproj"/>
+		</Target>
+		<Target Name="TKSTEP:Clean">
+			<MSBuild Projects="TKSTEP.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKSTEP:Make">
+			<MSBuild Projects="TKSTEP.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXDESTEP">
+			<MSBuild Projects="TKXDESTEP.cbproj"/>
+		</Target>
+		<Target Name="TKXDESTEP:Clean">
+			<MSBuild Projects="TKXDESTEP.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXDESTEP:Make">
+			<MSBuild Projects="TKXDESTEP.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TKVRML;TKXCAF;TKSTL;TKXSBase;TKXCAFSchema;TKXmlXCAF;TKBinXCAF;TKSTEPBase;TKIGES;TKSTEPAttr;TKSTEP209;TKXDEIGES;TKSTEP;TKXDESTEP"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TKVRML:Clean;TKXCAF:Clean;TKSTL:Clean;TKXSBase:Clean;TKXCAFSchema:Clean;TKXmlXCAF:Clean;TKBinXCAF:Clean;TKSTEPBase:Clean;TKIGES:Clean;TKSTEPAttr:Clean;TKSTEP209:Clean;TKXDEIGES:Clean;TKSTEP:Clean;TKXDESTEP:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TKVRML:Make;TKXCAF:Make;TKSTL:Make;TKXSBase:Make;TKXCAFSchema:Make;TKXmlXCAF:Make;TKBinXCAF:Make;TKSTEPBase:Make;TKIGES:Make;TKSTEPAttr:Make;TKSTEP209:Make;TKXDEIGES:Make;TKSTEP:Make;TKXDESTEP:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

@@ -1,0 +1,785 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\LDOM\;..\..\..\drv\PCDM\;..\..\..\src\PCDM\;..\..\..\src\CDF\;..\..\..\src\UTL\;..\..\..\drv\CDF\;..\..\..\drv\CDM\;..\..\..\src\CDM\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\LDOM\;..\..\..\drv\PCDM\;..\..\..\src\PCDM\;..\..\..\src\CDF\;..\..\..\src\UTL\;..\..\..\drv\CDF\;..\..\..\drv\CDM\;..\..\..\src\CDM\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_StoreList.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\PCDM\PCDM_SequenceNodeOfSequenceOfReference_0.cpp'">
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_Node.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_Session.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_COutMessageDriver.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_Writer.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_MetaDataDriver.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_NullMessageDriver.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOMBasicString.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_Document.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_ListIteratorOfListOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_Application.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_DataMapNodeOfPresentationDirectory_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_MemManager.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_PresentationDirectory_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_DirectoryIterator.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_StackNodeOfStackOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_ReferenceIterator.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_ListNodeOfListOfReferences_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_DocumentHasher_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_DataMapNodeOfMetaDataLookUpTable_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_DataMapIteratorOfPresentationDirectory_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_RetrievalDriver.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\PCDM\PCDM_DriverError_0.cpp'">
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_ReadWriter.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_ListOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_Timer.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_Document.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_MessageDriver.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOMParser.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_Attr.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_XmlReader.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_MapIteratorOfMapOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_ListOfReferences_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_MetaDataDriverFactory.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_ListNodeOfListOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_BasicAttribute.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDF\CDF_MetaDataDriverError_0.cpp'">
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_LDOMImplementation.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_NodeList.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_OSStream.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_Element.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_CharReference.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_Store.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_ListIteratorOfListOfReferences_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_MapOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_StdMapNodeOfMapOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\PCDM\PCDM_SequenceOfDocument_0.cpp'">
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_BasicElement.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_BasicNode.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_Directory.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_BasicText.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_MetaDataLookUpTable_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_StorageDriver.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_MetaData.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_DataMapIteratorOfMetaDataLookUpTable_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF_Application.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_Reference.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_Document.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_Reference.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\PCDM\PCDM_SequenceOfReference_0.cpp'">
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_StackIteratorOfStackOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_ReadWriter_1.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\PCDM\PCDM_SequenceNodeOfSequenceOfDocument_0.cpp'">
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDF\CDF.cpp'">
+			<IncludePath>..\..\..\drv\CDF;$(IncludePath)</IncludePath>
+			<Defines>__CDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_CharacterData.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOM_XmlWriter.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\CDM\CDM_StackOfDocument_0.cpp'">
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\UTL\UTL.cpp'">
+			<IncludePath>..\..\..\drv\UTL;$(IncludePath)</IncludePath>
+			<Defines>__UTL_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\LDOM\LDOMString.cpp'">
+			<IncludePath>..\..\..\drv\LDOM;$(IncludePath)</IncludePath>
+			<Defines>__LDOM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_DOMHeaderParser.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CDM\CDM_ReferenceIterator.cpp'">
+			<IncludePath>..\..\..\drv\CDM;$(IncludePath)</IncludePath>
+			<Defines>__CDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\PCDM\PCDM_Reader.cpp'">
+			<IncludePath>..\..\..\drv\PCDM;$(IncludePath)</IncludePath>
+			<Defines>__PCDM_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>75</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\CDF\CDF_MetaDataDriverError_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_DataMapIteratorOfMetaDataLookUpTable_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_DataMapIteratorOfPresentationDirectory_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_DataMapNodeOfMetaDataLookUpTable_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_DataMapNodeOfPresentationDirectory_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_DocumentHasher_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_ListIteratorOfListOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_ListIteratorOfListOfReferences_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_ListNodeOfListOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_ListNodeOfListOfReferences_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_ListOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_ListOfReferences_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_MapIteratorOfMapOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_MapOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_MetaDataLookUpTable_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_PresentationDirectory_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_StackIteratorOfStackOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_StackNodeOfStackOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_StackOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\CDM\CDM_StdMapNodeOfMapOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\PCDM\PCDM_DriverError_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\PCDM\PCDM_SequenceNodeOfSequenceOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\PCDM\PCDM_SequenceNodeOfSequenceOfReference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\PCDM\PCDM_SequenceOfDocument_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\PCDM\PCDM_SequenceOfReference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_Application.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_Directory.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_DirectoryIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_MetaDataDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_MetaDataDriverFactory.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_Session.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_Store.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_StoreList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDF\CDF_Timer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_Application.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_COutMessageDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_Document.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_MessageDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_MetaData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_NullMessageDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_Reference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CDM\CDM_ReferenceIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOMBasicString.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOMParser.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOMString.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_Attr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_BasicAttribute.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_BasicElement.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_BasicNode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_BasicText.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_CharacterData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_CharReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_Document.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_Element.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_LDOMImplementation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_MemManager.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_Node.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_NodeList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_OSStream.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_XmlReader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\LDOM\LDOM_XmlWriter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_Document.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_DOMHeaderParser.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_Reader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_ReadWriter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_ReadWriter_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_Reference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_ReferenceIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_RetrievalDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_StorageDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\PCDM\PCDM_Writer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\UTL\UTL.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

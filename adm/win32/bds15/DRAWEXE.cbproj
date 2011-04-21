@@ -1,0 +1,200 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{1BAA2759-F89A-4534-AF19-98B57A58BD3C}</ProjectGuid>
+			<ProjectType>CppConsoleApplication</ProjectType>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Platform>Win32</Platform>
+			<AppType>Console</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<IncludePath>..\..\..\src\DRAWEXE\;$(IncludePath)</IncludePath>
+			<TASM_Defines>_RTLDLL;NO_STRICT;_NO_VCL;WNT;CSFDB;WIN32;$(TASM_Defines)</TASM_Defines>
+			<BRCC_Defines>_RTLDLL;NO_STRICT;_NO_VCL;WNT;CSFDB;WIN32;$(BRCC_Defines)</BRCC_Defines>
+			<DCC_ResourcePath>..\..\..\src\DRAWEXE;..\..\src\DRAWEXE;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<NoVCL>true</NoVCL>
+			<DCC_UnitSearchPath>..\..\..\src\DRAWEXE;..\..\src\DRAWEXE;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<BCC_IncludePath>..\..\..\src\DRAWEXE;..\..\..\inc;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(BCC_IncludePath)</BCC_IncludePath>
+			<BRCC_IncludePath>..\..\..\src\DRAWEXE;..\..\..\inc;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<DCC_IncludePath>..\..\..\src\DRAWEXE;..\..\src\DRAWEXE;$(DCC_IncludePath)</DCC_IncludePath>
+			<PackageImports>vclx.bpi;vcl.bpi;rtl.bpi;dbrtl.bpi;vcldb.bpi;adortl.bpi;dbxcds.bpi;dbexpress.bpi;xmlrtl.bpi;vclie.bpi;inet.bpi;inetdbbde.bpi;inetdbxpress.bpi;soaprtl.bpi;dsnap.bpi;bdertl.bpi;vcldbx.bpi</PackageImports>
+			<TASM_IncludePath>..\..\..\src\DRAWEXE;..\..\..\inc;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(TASM_IncludePath)</TASM_IncludePath>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<DynamicRTL>true</DynamicRTL>
+			<ILINK_ObjectSearchPath>..\..\..\src\DRAWEXE;..\..\src\DRAWEXE;$(ILINK_ObjectSearchPath)</ILINK_ObjectSearchPath>
+			<OutputExt>exe</OutputExt>
+			<BCC_Defines>NO_STRICT;WNT;CSFDB;WIN32;$(BCC_Defines)</BCC_Defines>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<BCC_UserSuppliedOptions> -tWM  -tWC -6 -b</BCC_UserSuppliedOptions>
+			<ILINK_LibraryPath>..\..\..\src\DRAWEXE\;..\..\..\src\DRAWEXE;$(BDS)\lib;$(BDS)\lib\obj;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<DCC_ObjPath>..\..\..\src\DRAWEXE;..\..\src\DRAWEXE;$(DCC_ObjPath)</DCC_ObjPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BCC_UserSuppliedOptions> -tWM  -tWC -6 -b -k</BCC_UserSuppliedOptions>
+			<BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<DCC_AdditionalSwitches> -V</DCC_AdditionalSwitches>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<BCC_UserSuppliedOptions> -tWM  -tWC -6 -b -r</BCC_UserSuppliedOptions>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<TASM_Debugging>None</TASM_Debugging>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<DCC_AdditionalSwitches> -$O+</DCC_AdditionalSwitches>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="Libraries\TKBRep.lib">
+				<BuildOrder>4</BuildOrder>
+				<BuildOrder>11</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKDraw.lib">
+				<BuildOrder>3</BuildOrder>
+				<BuildOrder>12</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKernel.lib">
+				<BuildOrder>7</BuildOrder>
+				<BuildOrder>2</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKG2d.lib">
+				<BuildOrder>6</BuildOrder>
+				<BuildOrder>3</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKG3d.lib">
+				<BuildOrder>4</BuildOrder>
+				<BuildOrder>11</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKGeomAlgo.lib">
+				<BuildOrder>5</BuildOrder>
+				<BuildOrder>10</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKGeomBase.lib">
+				<BuildOrder>9</BuildOrder>
+				<BuildOrder>6</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKHLR.lib">
+				<BuildOrder>7</BuildOrder>
+				<BuildOrder>2</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKMath.lib">
+				<BuildOrder>8</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKMesh.lib">
+				<BuildOrder>9</BuildOrder>
+				<BuildOrder>0</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="Libraries\TKTopAlgo.lib">
+				<BuildOrder>5</BuildOrder>
+				<BuildOrder>10</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\src\DRAWEXE\DRAWEXE.cpp">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppConsoleApplication</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Debugging>
+						<Debugging Name="DebugSourceDirs"/>
+					</Debugging>
+					<Parameters>
+						<Parameters Name="UseLauncher">True</Parameters>
+						<Parameters Name="HostApplication">D:\Development\OpenCascade\occ_bcb_6.2.0\ros\win32\bind\DRAWEXE.exe</Parameters>
+						<Parameters Name="RemoteHost"/>
+						<Parameters Name="RemotePath"/>
+						<Parameters Name="RemoteParams"/>
+						<Parameters Name="RemoteLauncher"/>
+						<Parameters Name="UseRemoteLauncher">False</Parameters>
+						<Parameters Name="RemoteCWD"/>
+						<Parameters Name="RemoteDebug">False</Parameters>
+					</Parameters>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

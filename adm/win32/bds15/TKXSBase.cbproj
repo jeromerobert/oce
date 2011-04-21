@@ -1,0 +1,3055 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\drv\TransferBRep\;..\..\..\src\TransferBRep\;..\..\..\src\UnitsMethods\;..\..\..\src\HeaderSection\;..\..\..\src\RWHeaderSection\;..\..\..\src\XSControl\;..\..\..\drv\Interface\;..\..\..\src\Interface\;..\..\..\src\IFGraph\;..\..\..\src\StepData\;..\..\..\src\IFSelect\;..\..\..\drv\IFSelect\;..\..\..\src\MoniTool\;..\..\..\src\XSAlgo\;..\..\..\drv\MoniTool\;..\..\..\drv\StepData\;..\..\..\drv\StepFile\;..\..\..\src\StepFile\;..\..\..\src\StepSelect\;..\..\..\drv\StepSelect\;..\..\..\src\Transfer\;..\..\..\drv\Transfer\;..\..\..\src\APIHeaderSection\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\drv\TransferBRep\;..\..\..\src\TransferBRep\;..\..\..\src\UnitsMethods\;..\..\..\src\HeaderSection\;..\..\..\src\RWHeaderSection\;..\..\..\src\XSControl\;..\..\..\drv\Interface\;..\..\..\src\Interface\;..\..\..\src\IFGraph\;..\..\..\src\StepData\;..\..\..\src\IFSelect\;..\..\..\drv\IFSelect\;..\..\..\src\MoniTool\;..\..\..\src\XSAlgo\;..\..\..\drv\MoniTool\;..\..\..\drv\StepData\;..\..\..\drv\StepFile\;..\..\..\src\StepFile\;..\..\..\src\StepSelect\;..\..\..\drv\StepSelect\;..\..\..\src\Transfer\;..\..\..\drv\Transfer\;..\..\..\src\APIHeaderSection\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectType.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfSequenceOfGeneralModifier_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_StrongComponants.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_TypedValue.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectPointed.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_SCRoots.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFile\StepFile_Read.cpp'">
+			<IncludePath>..\..\..\drv\StepFile;$(IncludePath)</IncludePath>
+			<Defines>__StepFile_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_CheckIterator.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TransferBRep\TransferBRep_ShapeMapper_0.cpp'">
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_ProcessForFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_AppliedModifiers.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_Utils.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWHeaderSection\RWHeaderSection_RWFileSchema.cpp'">
+			<IncludePath>..\..\..\drv\RWHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__RWHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepSelect\StepSelect_WorkLibrary.cpp'">
+			<IncludePath>..\..\..\drv\StepSelect;$(IncludePath)</IncludePath>
+			<Defines>__StepSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_DataMapNodeOfDataMapOfShapeTransient_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignMultiple.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_TransferDispatch.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectAnyType.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepSelect\StepSelect_Activator.cpp'">
+			<IncludePath>..\..\..\drv\StepSelect;$(IncludePath)</IncludePath>
+			<Defines>__StepSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_DataMapOfShapeTransient_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Act.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_GeneralModule.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Activator.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfTSeqOfDispatch_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_Category.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TransferBRep\TransferBRep_HSequenceOfTransferResultInfo_0.cpp'">
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_EntityCluster.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSAlgo\XSAlgo.cpp'">
+			<IncludePath>..\..\..\drv\XSAlgo;$(IncludePath)</IncludePath>
+			<Defines>__XSAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_TransferMapOfProcessForTransient_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_AllShared.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_DescrGeneral.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_WorkSession.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\HeaderSection\HeaderSection.cpp'">
+			<IncludePath>..\..\..\drv\HeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__HeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_DispPerOne.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_Cumulate.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_Profile.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ModifReorder.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TransferBRep\TransferBRep_ShapeInfo.cpp'">
+			<IncludePath>..\..\..\drv\TransferBRep;$(IncludePath)</IncludePath>
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_HArray1OfHAsciiString_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_IntVal.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_IndexedMapOfAsciiString_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_DataInfo.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_NodeOfGeneralLib_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_DataMapOfTransientInteger_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_TransientProcess.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_Array1OfFileParameter_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_IndexedDataMapNodeOfTransferMapOfProcessForTransient_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_DescrProtocol.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_AttrList.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_Field.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ContextModif.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ModelCopier.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_DispGlobal.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignCategory.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_FuncShape.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_DataMapOfTimer_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_PDescr.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectInList.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_CheckFailure_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_Cycles.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_IntParam.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectModelEntities.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_MapContainer.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_Vars.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_Binder.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_FieldList1.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_GTool.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_MapAsciiStringHasher.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_NodeOfReaderLib_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_BasicDumper.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_WorkLibrary.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_SignText.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_TimerSentry.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_DataMapIteratorOfDataMapOfShapeTransient_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_UndefinedEntity.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TransferBRep\TransferBRep_TransferResultInfo.cpp'">
+			<IncludePath>..\..\..\drv\TransferBRep;$(IncludePath)</IncludePath>
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_Plex.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Functions.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\APIHeaderSection\APIHeaderSection_MakeHeader.cpp'">
+			<IncludePath>..\..\..\drv\APIHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__APIHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ParamEditor.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\UnitsMethods\UnitsMethods.cpp'">
+			<IncludePath>..\..\..\drv\UnitsMethods;$(IncludePath)</IncludePath>
+			<Defines>__UnitsMethods_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectSharing.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_SignTransferStatus.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_FieldList.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_SequenceOfCheck_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignatureList.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_TransferReader.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWHeaderSection\RWHeaderSection_GeneralModule.cpp'">
+			<IncludePath>..\..\..\drv\RWHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__RWHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSAlgo\XSAlgo_AlgoContainer.cpp'">
+			<IncludePath>..\..\..\drv\XSAlgo;$(IncludePath)</IncludePath>
+			<Defines>__XSAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_GraphContent.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SessionPilot.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_Timer.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_CopyTool.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectionIterator.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfSequenceOfInterfaceModel_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_ProcessForTransient_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_DispPerFiles.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_GlobalNodeOfGeneralLib_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_StaticStandards.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepData\StepData_HArray1OfField_0.cpp'">
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_Controller.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepData\StepData_WriterLib_0.cpp'">
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_TransferFailure_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_SubPartsIterator.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_ValueInterpret.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_SequenceOfBinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_GraphCounter.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_ShareFlags.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_ActorOfFinderProcess.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_Check.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectBase.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectDiff.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_DataInfo.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_StepModel.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_IndexedDataMapOfShapeTransient_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_SelectReal.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_EntityList.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_ReportEntity.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_StepWriter.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSAlgo\XSAlgo_ToolContainer.cpp'">
+			<IncludePath>..\..\..\drv\XSAlgo;$(IncludePath)</IncludePath>
+			<Defines>__XSAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfTSeqOfSelection_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_EditForm.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_IteratorOfProcessForTransient_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceOfInterfaceModel_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepData\StepData_FileRecognizer_0.cpp'">
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\HeaderSection\HeaderSection_FileName.cpp'">
+			<IncludePath>..\..\..\drv\HeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__HeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectRange.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_LineBuffer.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_EntityIterator.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_TransientMapper_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TransferBRep\TransferBRep_OrientedShapeMapper_0.cpp'">
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_IntVal.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_MTHasher.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_ReaderModule.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_SequenceNodeOfSequenceOfElement_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_FloatWriter.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_SequenceNodeOfSequenceOfCheck_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_TypedValue.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_TransferMapOfProcessForFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_FinderProcess.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_Writer.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_SelectMember.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectShared.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectRootComps.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectModelRoots.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_BinderOfTransientInteger.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_SequenceOfFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_DispPerSignature.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_InterfaceModel.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_SequenceOfElement_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectRoots.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Transformer.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_FileReaderTool.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_TransferOutput.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_DefaultGeneral.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_BitMap.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_ECDescr.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWHeaderSection\RWHeaderSection_ReadWriteModule.cpp'">
+			<IncludePath>..\..\..\drv\RWHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__RWHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_Graph.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_Element.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_SignShape.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepData\StepData_NodeOfWriterLib_0.cpp'">
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_CopyMap.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignType.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_DescrReadWrite.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_Protocol.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_Simple.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_GlobalNodeOfReaderLib_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectDeduct.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_IndexedMapNodeOfIndexedMapOfAsciiString_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Modifier.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_SelectNamed.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectSuite.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TransferBRep\TransferBRep_BinderOfShape_0.cpp'">
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignAncestor.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_FileProtocol.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_SimpleBinderOfTransient.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectFlag.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectSent.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SessionDumper.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectEntityNumber.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_Protocol.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_HSequenceOfCheck_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TransferBRep\TransferBRep_ShapeListBinder.cpp'">
+			<IncludePath>..\..\..\drv\TransferBRep;$(IncludePath)</IncludePath>
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_SelectType.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_StepDumper.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_ElemHasher.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_WorkSession.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_TransferIterator.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ShareOutResult.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_PacketList.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_TransferInput.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectExplore.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_HSequenceOfBinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectUnion.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TransferBRep\TransferBRep_SequenceNodeOfSequenceOfTransferResultInfo_0.cpp'">
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_TransferWriter.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_Described.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_EDescr.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_ActorOfProcessForFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\HeaderSection\HeaderSection_FileSchema.cpp'">
+			<IncludePath>..\..\..\drv\HeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__HeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepSelect\StepSelect_FloatFormat.cpp'">
+			<IncludePath>..\..\..\drv\StepSelect;$(IncludePath)</IncludePath>
+			<Defines>__StepSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_Option.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Editor.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWHeaderSection\RWHeaderSection.cpp'">
+			<IncludePath>..\..\..\drv\RWHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__RWHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_OptValue.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_TransformStandard.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_IndexedDataMapNodeOfTransferMapOfProcessForFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_Functions.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_ResultFromTransient.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_SignLabel.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectAnyList.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectControl.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_StepReaderData.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_ReadWriteModule.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_ActorOfProcessForTransient_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_UndefinedContent.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectIntersection.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceOfAppliedModifiers_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_Stat.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_DataMapNodeOfDataMapOfTimer_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_MSG.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_ParamList.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_GeneralModule.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ActFunc.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectUnknownEntities.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_SelectArrReal.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_GeneralLib_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_HeaderTool.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\APIHeaderSection\APIHeaderSection_EditHeader.cpp'">
+			<IncludePath>..\..\..\drv\APIHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__APIHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepSelect\StepSelect_FileModifier_0.cpp'">
+			<Defines>__StepSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_CaseData.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Signature.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TransferBRep\TransferBRep_SequenceOfTransferResultInfo_0.cpp'">
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFile\lex.step.c'">
+			<Defines>__StepFile_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_SelectInt.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_Static.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Selection.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_HSeqOfSelection_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_SequenceNodeOfSequenceOfBinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_FileParameter.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_StepReaderTool.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ListEditor.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceOfGeneralModifier_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_SelectForTransfer.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_DataMapNodeOfDataMapOfTransientInteger_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_SignType.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectCombine.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_Articulations.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_DispPerCount.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\HeaderSection\HeaderSection_HeaderRecognizer.cpp'">
+			<IncludePath>..\..\..\drv\HeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__HeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_CopyControl.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectExtract.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_Finder.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFile\StepFile_CallFailure.cpp'">
+			<IncludePath>..\..\..\drv\StepFile;$(IncludePath)</IncludePath>
+			<Defines>__StepFile_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_FieldListN.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_CheckTool.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_GeneralModifier.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_TSeqOfDispatch_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_ExternalSources.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_TransferDeadLoop_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFile\step.tab.c'">
+			<Defines>__StepFile_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_ConnectedComponants.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepData\StepData_Array1OfField_0.cpp'">
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_ActorDispatch.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepData\StepData_GlobalNodeOfWriterLib_0.cpp'">
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ContextWrite.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\HeaderSection\HeaderSection_Protocol.cpp'">
+			<IncludePath>..\..\..\drv\HeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__HeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_Array1OfHAsciiString_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepSelect\StepSelect_StepType.cpp'">
+			<IncludePath>..\..\..\drv\StepSelect;$(IncludePath)</IncludePath>
+			<Defines>__StepSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_InterfaceMismatch_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_HSequenceOfFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TransferBRep\TransferBRep.cpp'">
+			<IncludePath>..\..\..\drv\TransferBRep;$(IncludePath)</IncludePath>
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_Reader.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_FieldListD.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SessionFile.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_AllConnected.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_MultipleBinder.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_TSeqOfSelection_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\HeaderSection\HeaderSection_FileDescription.cpp'">
+			<IncludePath>..\..\..\drv\HeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__HeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepSelect\StepSelect_ModelModifier_0.cpp'">
+			<Defines>__StepSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_TransientListBinder.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_TransientElem_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_STAT.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFGraph\IFGraph_Compare.cpp'">
+			<IncludePath>..\..\..\drv\IFGraph;$(IncludePath)</IncludePath>
+			<Defines>__IFGraph_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TransferBRep\TransferBRep_ShapeBinder.cpp'">
+			<IncludePath>..\..\..\drv\TransferBRep;$(IncludePath)</IncludePath>
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_DataMapIteratorOfDataMapOfTransientInteger_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWHeaderSection\RWHeaderSection_RWFileDescription.cpp'">
+			<IncludePath>..\..\..\drv\RWHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__RWHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_InterfaceError_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_DispatchControl.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectIncorrectEntities.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_ActorOfTransientProcess.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_RealVal.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignCounter.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_IteratorOfProcessForFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_Dispatch.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectSignedShared.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectSignedSharing.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XSControl\XSControl_ConnectedShapes.cpp'">
+			<IncludePath>..\..\..\drv\XSControl;$(IncludePath)</IncludePath>
+			<Defines>__XSControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectErrorEntities.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_FreeFormEntity.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_EnumTool.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_VoidBinder.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ModifEditForm.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_CheckCounter.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFile\stepread.c'">
+			<IncludePath>..\..\..\drv\StepFile;$(IncludePath)</IncludePath>
+			<Defines>__StepFile_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWHeaderSection\RWHeaderSection_RWFileName.cpp'">
+			<IncludePath>..\..\..\drv\RWHeaderSection;$(IncludePath)</IncludePath>
+			<Defines>__RWHeaderSection_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_FileReaderData.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_HSequenceOfElement_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\MoniTool\MoniTool_ValueSatisfies.cpp'">
+			<IncludePath>..\..\..\drv\MoniTool;$(IncludePath)</IncludePath>
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_IndexedDataMapNodeOfIndexedDataMapOfShapeTransient_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_ShareOut.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Interface\Interface_ReaderLib_0.cpp'">
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_FindHasher.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SelectSignature.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_IntList.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IFSelect\IFSelect_SignValidity.cpp'">
+			<IncludePath>..\..\..\drv\IFSelect;$(IncludePath)</IncludePath>
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfSequenceOfAppliedModifiers_0.cpp'">
+			<Defines>__IFSelect_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\MoniTool\MoniTool_DataMapIteratorOfDataMapOfTimer_0.cpp'">
+			<Defines>__MoniTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TransferBRep\TransferBRep_Reader.cpp'">
+			<IncludePath>..\..\..\drv\TransferBRep;$(IncludePath)</IncludePath>
+			<Defines>__TransferBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_ShareTool.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Transfer\Transfer_ResultFromModel.cpp'">
+			<IncludePath>..\..\..\drv\Transfer;$(IncludePath)</IncludePath>
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_ParamSet.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepData\StepData_ESDescr.cpp'">
+			<IncludePath>..\..\..\drv\StepData;$(IncludePath)</IncludePath>
+			<Defines>__StepData_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Transfer\Transfer_SequenceNodeOfSequenceOfFinder_0.cpp'">
+			<Defines>__Transfer_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Interface\Interface_HGraph.cpp'">
+			<IncludePath>..\..\..\drv\Interface;$(IncludePath)</IncludePath>
+			<Defines>__Interface_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKBRep.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>330</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>337</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG2d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>331</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>332</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>333</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>334</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKShHealing.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>335</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKTopAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>336</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_HSeqOfSelection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfSequenceOfAppliedModifiers_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfSequenceOfGeneralModifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfSequenceOfInterfaceModel_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfTSeqOfDispatch_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceNodeOfTSeqOfSelection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceOfAppliedModifiers_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceOfGeneralModifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>198</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_SequenceOfInterfaceModel_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>199</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_TSeqOfDispatch_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>200</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IFSelect\IFSelect_TSeqOfSelection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>201</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_Array1OfFileParameter_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_Array1OfHAsciiString_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_CheckFailure_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_DataMapIteratorOfDataMapOfTransientInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_DataMapNodeOfDataMapOfTransientInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_DataMapOfTransientInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_GeneralLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_GlobalNodeOfGeneralLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_GlobalNodeOfReaderLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_HArray1OfHAsciiString_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_HSequenceOfCheck_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_IndexedMapNodeOfIndexedMapOfAsciiString_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_IndexedMapOfAsciiString_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_InterfaceError_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_InterfaceMismatch_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_NodeOfGeneralLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_NodeOfReaderLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_ReaderLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_SequenceNodeOfSequenceOfCheck_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Interface\Interface_SequenceOfCheck_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_DataMapIteratorOfDataMapOfShapeTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>318</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_DataMapIteratorOfDataMapOfTimer_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>319</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_DataMapNodeOfDataMapOfShapeTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>320</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_DataMapNodeOfDataMapOfTimer_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>321</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_DataMapOfShapeTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>322</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_DataMapOfTimer_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>323</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_HSequenceOfElement_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>324</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_IndexedDataMapNodeOfIndexedDataMapOfShapeTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>325</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_IndexedDataMapOfShapeTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>326</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_SequenceNodeOfSequenceOfElement_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>327</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_SequenceOfElement_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>328</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\MoniTool\MoniTool_TransientElem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>329</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepData\StepData_Array1OfField_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>264</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepData\StepData_FileRecognizer_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>265</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepData\StepData_GlobalNodeOfWriterLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>266</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepData\StepData_HArray1OfField_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>267</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepData\StepData_NodeOfWriterLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>268</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepData\StepData_WriterLib_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>269</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFile\lex.step.c">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>273</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFile\step.tab.c">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>274</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepSelect\StepSelect_FileModifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>293</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepSelect\StepSelect_ModelModifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>294</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TransferBRep\TransferBRep_BinderOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>208</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TransferBRep\TransferBRep_HSequenceOfTransferResultInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>209</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TransferBRep\TransferBRep_OrientedShapeMapper_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>210</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TransferBRep\TransferBRep_SequenceNodeOfSequenceOfTransferResultInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>211</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TransferBRep\TransferBRep_SequenceOfTransferResultInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>212</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TransferBRep\TransferBRep_ShapeMapper_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>213</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_ActorOfProcessForFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_ActorOfProcessForTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_HSequenceOfBinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_HSequenceOfFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_IndexedDataMapNodeOfTransferMapOfProcessForFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_IndexedDataMapNodeOfTransferMapOfProcessForTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_IteratorOfProcessForFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_IteratorOfProcessForTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_ProcessForFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_ProcessForTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_SequenceNodeOfSequenceOfBinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_SequenceNodeOfSequenceOfFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_SequenceOfBinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_SequenceOfFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_TransferDeadLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_TransferFailure_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_TransferMapOfProcessForFinder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_TransferMapOfProcessForTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Transfer\Transfer_TransientMapper_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\APIHeaderSection\APIHeaderSection_EditHeader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>287</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\APIHeaderSection\APIHeaderSection_MakeHeader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>288</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\HeaderSection\HeaderSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>275</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\HeaderSection\HeaderSection_FileDescription.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>276</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\HeaderSection\HeaderSection_FileName.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>277</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\HeaderSection\HeaderSection_FileSchema.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>278</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\HeaderSection\HeaderSection_HeaderRecognizer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>279</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\HeaderSection\HeaderSection_Protocol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>280</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_AllConnected.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_AllShared.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_Articulations.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_Compare.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_ConnectedComponants.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_Cumulate.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_Cycles.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_ExternalSources.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_SCRoots.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_StrongComponants.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFGraph\IFGraph_SubPartsIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Act.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ActFunc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Activator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_AppliedModifiers.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_BasicDumper.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_CheckCounter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ContextModif.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ContextWrite.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Dispatch.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_DispGlobal.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_DispPerCount.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_DispPerFiles.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_DispPerOne.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_DispPerSignature.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_EditForm.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Editor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Functions.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_GeneralModifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_GraphCounter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_IntParam.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ListEditor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ModelCopier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ModifEditForm.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Modifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ModifReorder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_PacketList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ParamEditor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectAnyList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectAnyType.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectBase.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectCombine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectControl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectDeduct.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectDiff.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectEntityNumber.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectErrorEntities.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectExplore.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectExtract.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectFlag.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectIncorrectEntities.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectInList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectIntersection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Selection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectionIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectModelEntities.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectModelRoots.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectPointed.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectRange.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectRootComps.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectRoots.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectSent.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectShared.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectSharing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectSignature.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectSignedShared.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectSignedSharing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectSuite.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectType.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectUnion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SelectUnknownEntities.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SessionDumper.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SessionFile.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SessionPilot.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ShareOut.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_ShareOutResult.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignAncestor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Signature.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignatureList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignCategory.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignCounter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignMultiple.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignType.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_SignValidity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_Transformer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_TransformStandard.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_WorkLibrary.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IFSelect\IFSelect_WorkSession.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_BitMap.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_Category.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_Check.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_CheckIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_CheckTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_CopyControl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_CopyMap.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_CopyTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_EntityCluster.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_EntityIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_EntityList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_FileParameter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_FileReaderData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_FileReaderTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_FloatWriter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_GeneralModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_Graph.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_GraphContent.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_GTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_HGraph.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_InterfaceModel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_IntList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_IntVal.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_LineBuffer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_MapAsciiStringHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_MSG.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_ParamList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_ParamSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_Protocol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_ReaderModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_ReportEntity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_ShareFlags.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_ShareTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_SignLabel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_SignType.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_STAT.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_Static.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_StaticStandards.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_TypedValue.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Interface\Interface_UndefinedContent.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_AttrList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>299</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_CaseData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>300</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_DataInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>301</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_Element.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>302</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_ElemHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>303</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_IntVal.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>304</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_MTHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>305</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_Option.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>306</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_OptValue.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>307</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_Profile.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>308</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_RealVal.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>309</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_SignShape.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>310</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_SignText.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>311</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_Stat.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>312</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_Timer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>313</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_TimerSentry.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>314</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_TypedValue.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>315</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_ValueInterpret.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>316</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\MoniTool\MoniTool_ValueSatisfies.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>317</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWHeaderSection\RWHeaderSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>281</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWHeaderSection\RWHeaderSection_GeneralModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>282</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWHeaderSection\RWHeaderSection_ReadWriteModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>283</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWHeaderSection\RWHeaderSection_RWFileDescription.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>284</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWHeaderSection\RWHeaderSection_RWFileName.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>285</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWHeaderSection\RWHeaderSection_RWFileSchema.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>286</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>228</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_DefaultGeneral.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>229</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_DescrGeneral.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>230</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_Described.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>231</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_DescrProtocol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>232</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_DescrReadWrite.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>233</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_ECDescr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>234</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_EDescr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>235</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_EnumTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>236</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_ESDescr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>237</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_Field.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>238</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_FieldList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>239</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_FieldList1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>240</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_FieldListD.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>241</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_FieldListN.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>242</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_FileProtocol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>243</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_FreeFormEntity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>244</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_GeneralModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>245</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_HeaderTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>246</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_PDescr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>247</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_Plex.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>248</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_Protocol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>249</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_ReadWriteModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>250</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_SelectArrReal.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>251</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_SelectInt.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>252</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_SelectMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>253</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_SelectNamed.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>254</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_SelectReal.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>255</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_SelectType.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>256</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_Simple.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>257</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_StepDumper.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>258</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_StepModel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>259</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_StepReaderData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>260</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_StepReaderTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>261</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_StepWriter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>262</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepData\StepData_UndefinedEntity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>263</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFile\StepFile_CallFailure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>270</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFile\StepFile_Read.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>271</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFile\stepread.c">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>272</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepSelect\StepSelect_Activator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>289</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepSelect\StepSelect_FloatFormat.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>290</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepSelect\StepSelect_StepType.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>291</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepSelect\StepSelect_WorkLibrary.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>292</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TransferBRep\TransferBRep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>202</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TransferBRep\TransferBRep_Reader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>203</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TransferBRep\TransferBRep_ShapeBinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>204</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TransferBRep\TransferBRep_ShapeInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>205</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TransferBRep\TransferBRep_ShapeListBinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>206</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TransferBRep\TransferBRep_TransferResultInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>207</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_ActorDispatch.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_ActorOfFinderProcess.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_ActorOfTransientProcess.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_Binder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_BinderOfTransientInteger.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_DataInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_DispatchControl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_Finder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_FinderProcess.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_FindHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_MapContainer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_MultipleBinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_ResultFromModel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_ResultFromTransient.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_SimpleBinderOfTransient.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_TransferDispatch.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_TransferInput.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_TransferIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_TransferOutput.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_TransientListBinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_TransientProcess.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Transfer\Transfer_VoidBinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\UnitsMethods\UnitsMethods.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>295</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSAlgo\XSAlgo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>296</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSAlgo\XSAlgo_AlgoContainer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>297</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSAlgo\XSAlgo_ToolContainer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>298</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>214</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_ConnectedShapes.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>215</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_Controller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>216</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_FuncShape.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>217</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_Functions.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>218</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_Reader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>219</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_SelectForTransfer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>220</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_SignTransferStatus.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>221</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_TransferReader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>222</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_TransferWriter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>223</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_Utils.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>224</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_Vars.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>225</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_WorkSession.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>226</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XSControl\XSControl_Writer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>227</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

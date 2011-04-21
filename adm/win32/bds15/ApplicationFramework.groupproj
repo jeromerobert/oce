@@ -1,0 +1,240 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{C1ADD620-08CE-4D46-AC5F-45CED18C967A}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TKCDF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PTKernel.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKLCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="FWOSPlugin.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKPShape.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKBinL.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXmlL.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKTObj.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKShapeSchema.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKPLCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKBin.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXml.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKBinTObj.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXmlTObj.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKPCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKStdLSchema.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKStdSchema.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TKCDF">
+			<MSBuild Projects="TKCDF.cbproj"/>
+		</Target>
+		<Target Name="TKCDF:Clean">
+			<MSBuild Projects="TKCDF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKCDF:Make">
+			<MSBuild Projects="TKCDF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="PTKernel">
+			<MSBuild Projects="PTKernel.cbproj"/>
+		</Target>
+		<Target Name="PTKernel:Clean">
+			<MSBuild Projects="PTKernel.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PTKernel:Make">
+			<MSBuild Projects="PTKernel.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKLCAF">
+			<MSBuild Projects="TKLCAF.cbproj"/>
+		</Target>
+		<Target Name="TKLCAF:Clean">
+			<MSBuild Projects="TKLCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKLCAF:Make">
+			<MSBuild Projects="TKLCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="FWOSPlugin">
+			<MSBuild Projects="FWOSPlugin.cbproj"/>
+		</Target>
+		<Target Name="FWOSPlugin:Clean">
+			<MSBuild Projects="FWOSPlugin.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="FWOSPlugin:Make">
+			<MSBuild Projects="FWOSPlugin.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKPShape">
+			<MSBuild Projects="TKPShape.cbproj"/>
+		</Target>
+		<Target Name="TKPShape:Clean">
+			<MSBuild Projects="TKPShape.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKPShape:Make">
+			<MSBuild Projects="TKPShape.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKCAF">
+			<MSBuild Projects="TKCAF.cbproj"/>
+		</Target>
+		<Target Name="TKCAF:Clean">
+			<MSBuild Projects="TKCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKCAF:Make">
+			<MSBuild Projects="TKCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKBinL">
+			<MSBuild Projects="TKBinL.cbproj"/>
+		</Target>
+		<Target Name="TKBinL:Clean">
+			<MSBuild Projects="TKBinL.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKBinL:Make">
+			<MSBuild Projects="TKBinL.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXmlL">
+			<MSBuild Projects="TKXmlL.cbproj"/>
+		</Target>
+		<Target Name="TKXmlL:Clean">
+			<MSBuild Projects="TKXmlL.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXmlL:Make">
+			<MSBuild Projects="TKXmlL.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKTObj">
+			<MSBuild Projects="TKTObj.cbproj"/>
+		</Target>
+		<Target Name="TKTObj:Clean">
+			<MSBuild Projects="TKTObj.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKTObj:Make">
+			<MSBuild Projects="TKTObj.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKShapeSchema">
+			<MSBuild Projects="TKShapeSchema.cbproj"/>
+		</Target>
+		<Target Name="TKShapeSchema:Clean">
+			<MSBuild Projects="TKShapeSchema.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKShapeSchema:Make">
+			<MSBuild Projects="TKShapeSchema.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKPLCAF">
+			<MSBuild Projects="TKPLCAF.cbproj"/>
+		</Target>
+		<Target Name="TKPLCAF:Clean">
+			<MSBuild Projects="TKPLCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKPLCAF:Make">
+			<MSBuild Projects="TKPLCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKBin">
+			<MSBuild Projects="TKBin.cbproj"/>
+		</Target>
+		<Target Name="TKBin:Clean">
+			<MSBuild Projects="TKBin.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKBin:Make">
+			<MSBuild Projects="TKBin.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXml">
+			<MSBuild Projects="TKXml.cbproj"/>
+		</Target>
+		<Target Name="TKXml:Clean">
+			<MSBuild Projects="TKXml.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXml:Make">
+			<MSBuild Projects="TKXml.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKBinTObj">
+			<MSBuild Projects="TKBinTObj.cbproj"/>
+		</Target>
+		<Target Name="TKBinTObj:Clean">
+			<MSBuild Projects="TKBinTObj.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKBinTObj:Make">
+			<MSBuild Projects="TKBinTObj.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXmlTObj">
+			<MSBuild Projects="TKXmlTObj.cbproj"/>
+		</Target>
+		<Target Name="TKXmlTObj:Clean">
+			<MSBuild Projects="TKXmlTObj.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXmlTObj:Make">
+			<MSBuild Projects="TKXmlTObj.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKPCAF">
+			<MSBuild Projects="TKPCAF.cbproj"/>
+		</Target>
+		<Target Name="TKPCAF:Clean">
+			<MSBuild Projects="TKPCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKPCAF:Make">
+			<MSBuild Projects="TKPCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKStdLSchema">
+			<MSBuild Projects="TKStdLSchema.cbproj"/>
+		</Target>
+		<Target Name="TKStdLSchema:Clean">
+			<MSBuild Projects="TKStdLSchema.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKStdLSchema:Make">
+			<MSBuild Projects="TKStdLSchema.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKStdSchema">
+			<MSBuild Projects="TKStdSchema.cbproj"/>
+		</Target>
+		<Target Name="TKStdSchema:Clean">
+			<MSBuild Projects="TKStdSchema.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKStdSchema:Make">
+			<MSBuild Projects="TKStdSchema.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TKCDF;PTKernel;TKLCAF;FWOSPlugin;TKPShape;TKCAF;TKBinL;TKXmlL;TKTObj;TKShapeSchema;TKPLCAF;TKBin;TKXml;TKBinTObj;TKXmlTObj;TKPCAF;TKStdLSchema;TKStdSchema"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TKCDF:Clean;PTKernel:Clean;TKLCAF:Clean;FWOSPlugin:Clean;TKPShape:Clean;TKCAF:Clean;TKBinL:Clean;TKXmlL:Clean;TKTObj:Clean;TKShapeSchema:Clean;TKPLCAF:Clean;TKBin:Clean;TKXml:Clean;TKBinTObj:Clean;TKXmlTObj:Clean;TKPCAF:Clean;TKStdLSchema:Clean;TKStdSchema:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TKCDF:Make;PTKernel:Make;TKLCAF:Make;FWOSPlugin:Make;TKPShape:Make;TKCAF:Make;TKBinL:Make;TKXmlL:Make;TKTObj:Make;TKShapeSchema:Make;TKPLCAF:Make;TKBin:Make;TKXml:Make;TKBinTObj:Make;TKXmlTObj:Make;TKPCAF:Make;TKStdLSchema:Make;TKStdSchema:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

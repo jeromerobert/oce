@@ -1,0 +1,625 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\XmlMFunction\;..\..\..\src\XmlMDataStd\;..\..\..\src\XmlLDrivers\;..\..\..\drv\XmlLDrivers\;..\..\..\src\XmlObjMgt\;..\..\..\src\XmlMDocStd\;..\..\..\src\XmlMDF\;..\..\..\drv\XmlMDF\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\XmlMFunction\;..\..\..\src\XmlMDataStd\;..\..\..\src\XmlLDrivers\;..\..\..\drv\XmlLDrivers\;..\..\..\src\XmlObjMgt\;..\..\..\src\XmlMDocStd\;..\..\..\src\XmlMDF\;..\..\..\drv\XmlMDF\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_IntPackedMapDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlMDF\XmlMDF_DataMapIteratorOfMapOfDriver_0.cpp'">
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_IntegerArrayDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDocStd\XmlMDocStd_XLinkDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDocStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDocStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDF\XmlMDF_ReferenceDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDF;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_ExtStringListDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_ReferenceArrayDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDF\XmlMDF_TagSourceDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDF;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlLDrivers\XmlLDrivers_SequenceNodeOfSequenceOfNamespaceDef_0.cpp'">
+			<Defines>__XmlLDrivers_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDocStd\XmlMDocStd.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDocStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDocStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_ByteArrayDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlLDrivers\XmlLDrivers_SequenceOfNamespaceDef_0.cpp'">
+			<Defines>__XmlLDrivers_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_RelationDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_NameDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_CommentDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_NamedDataDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDF\XmlMDF_ADriverTable.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDF;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_BooleanListDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_IntegerDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_ReferenceListDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_IntegerListDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_BooleanArrayDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMFunction\XmlMFunction_FunctionDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMFunction;$(IncludePath)</IncludePath>
+			<Defines>__XmlMFunction_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlObjMgt\XmlObjMgt_GP.cpp'">
+			<IncludePath>..\..\..\drv\XmlObjMgt;$(IncludePath)</IncludePath>
+			<Defines>__XmlObjMgt_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMFunction\XmlMFunction_ScopeDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMFunction;$(IncludePath)</IncludePath>
+			<Defines>__XmlMFunction_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMFunction\XmlMFunction.cpp'">
+			<IncludePath>..\..\..\drv\XmlMFunction;$(IncludePath)</IncludePath>
+			<Defines>__XmlMFunction_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlMDF\XmlMDF_DataMapNodeOfTypeADriverMap_0.cpp'">
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlMDF\XmlMDF_TypeADriverMap_0.cpp'">
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_RealListDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_TreeNodeDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlLDrivers\XmlLDrivers_NamespaceDef.cpp'">
+			<IncludePath>..\..\..\drv\XmlLDrivers;$(IncludePath)</IncludePath>
+			<Defines>__XmlLDrivers_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_ExpressionDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_VariableDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlMDF\XmlMDF_MapOfDriver_0.cpp'">
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDF\XmlMDF_ADriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDF;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDF\XmlMDF.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDF;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_ExtStringArrayDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_NoteBookDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlMDF\XmlMDF_DataMapNodeOfMapOfDriver_0.cpp'">
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlObjMgt\XmlObjMgt.cpp'">
+			<IncludePath>..\..\..\drv\XmlObjMgt;$(IncludePath)</IncludePath>
+			<Defines>__XmlObjMgt_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_RealDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_RealArrayDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlLDrivers\XmlLDrivers.cpp'">
+			<IncludePath>..\..\..\drv\XmlLDrivers;$(IncludePath)</IncludePath>
+			<Defines>__XmlLDrivers_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_DirectoryDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMFunction\XmlMFunction_GraphNodeDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMFunction;$(IncludePath)</IncludePath>
+			<Defines>__XmlMFunction_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlObjMgt\XmlObjMgt_Persistent.cpp'">
+			<IncludePath>..\..\..\drv\XmlObjMgt;$(IncludePath)</IncludePath>
+			<Defines>__XmlObjMgt_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\XmlMDF\XmlMDF_DataMapIteratorOfTypeADriverMap_0.cpp'">
+			<Defines>__XmlMDF_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlLDrivers\XmlLDrivers_DocumentStorageDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlLDrivers;$(IncludePath)</IncludePath>
+			<Defines>__XmlLDrivers_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_TickDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_AsciiStringDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlMDataStd\XmlMDataStd_UAttributeDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlMDataStd;$(IncludePath)</IncludePath>
+			<Defines>__XmlMDataStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\XmlLDrivers\XmlLDrivers_DocumentRetrievalDriver.cpp'">
+			<IncludePath>..\..\..\drv\XmlLDrivers;$(IncludePath)</IncludePath>
+			<Defines>__XmlLDrivers_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKCDF.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>54</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>57</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKLCAF.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>55</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>56</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\XmlLDrivers\XmlLDrivers_SequenceNodeOfSequenceOfNamespaceDef_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlLDrivers\XmlLDrivers_SequenceOfNamespaceDef_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlMDF\XmlMDF_DataMapIteratorOfMapOfDriver_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlMDF\XmlMDF_DataMapIteratorOfTypeADriverMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlMDF\XmlMDF_DataMapNodeOfMapOfDriver_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlMDF\XmlMDF_DataMapNodeOfTypeADriverMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlMDF\XmlMDF_MapOfDriver_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\XmlMDF\XmlMDF_TypeADriverMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlLDrivers\XmlLDrivers.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlLDrivers\XmlLDrivers_DocumentRetrievalDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlLDrivers\XmlLDrivers_DocumentStorageDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlLDrivers\XmlLDrivers_NamespaceDef.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_AsciiStringDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_BooleanArrayDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_BooleanListDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_ByteArrayDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_CommentDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_DirectoryDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_ExpressionDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_ExtStringArrayDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_ExtStringListDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_IntegerArrayDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_IntegerDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_IntegerListDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_IntPackedMapDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_NamedDataDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_NameDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_NoteBookDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_RealArrayDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_RealDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_RealListDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_ReferenceArrayDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_ReferenceListDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_RelationDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_TickDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_TreeNodeDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_UAttributeDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDataStd\XmlMDataStd_VariableDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDF\XmlMDF.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDF\XmlMDF_ADriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDF\XmlMDF_ADriverTable.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDF\XmlMDF_ReferenceDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDF\XmlMDF_TagSourceDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDocStd\XmlMDocStd.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMDocStd\XmlMDocStd_XLinkDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMFunction\XmlMFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMFunction\XmlMFunction_FunctionDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMFunction\XmlMFunction_GraphNodeDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlMFunction\XmlMFunction_ScopeDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlObjMgt\XmlObjMgt.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlObjMgt\XmlObjMgt_GP.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\XmlObjMgt\XmlObjMgt_Persistent.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

@@ -1,0 +1,2519 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\BooleanOperations\;..\..\..\drv\BooleanOperations\;..\..\..\drv\BOP\;..\..\..\src\BOP\;..\..\..\src\BRepAlgoAPI\;..\..\..\src\IntTools\;..\..\..\drv\IntTools\;..\..\..\src\BOPTools\;..\..\..\drv\BOPTools\;..\..\..\drv\BOPTColStd\;..\..\..\src\BOPTColStd\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\BooleanOperations\;..\..\..\drv\BooleanOperations\;..\..\..\drv\BOP\;..\..\..\src\BOP\;..\..\..\src\BRepAlgoAPI\;..\..\..\src\IntTools\;..\..\..\drv\IntTools\;..\..\..\src\BOPTools\;..\..\..\drv\BOPTools\;..\..\..\drv\BOPTColStd\;..\..\..\src\BOPTColStd\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireSplitter.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireWire.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_SequenceNodeOfSequenceOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BooleanOperations\BooleanOperations_ShapesDataStructure.cpp'">
+			<IncludePath>..\..\..\drv\BooleanOperations;$(IncludePath)</IncludePath>
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_Array1OfRoots_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellShell.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_DataMapNodeOfDataMapOfSurfaceSampleBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfVEInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceOfRanges_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfShapeEnum_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_CArray1OfPnt2d_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListNodeOfListOfLoop_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_ComparePave.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceOfCurves_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapNodeOfIndexedDataMapOfIntegerInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfESInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_CArray1OfInteger_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellFaceSet.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfIntegerDEInfo_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_DataMapOfSurfaceSampleBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_CArray1OfInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_BeanBeanIntersector.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_CommonBlockAPI.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfCoupleOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_SequenceNodeOfSequenceOfCurves_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_VVInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BooleanOperations\BooleanOperations_AncestorsAndSuccessors.cpp'">
+			<IncludePath>..\..\..\drv\BooleanOperations;$(IncludePath)</IncludePath>
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListIteratorOfListOfEdgeInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_InterferenceLine.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfIntegerState_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_IndexedDataMapNodeOfIndexedDataMapOfTransientAddress_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_IndexedDataMapOfSolidClassifier_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTColStd\BOPTColStd_ShapeWithRank.cpp'">
+			<IncludePath>..\..\..\drv\BOPTColStd;$(IncludePath)</IncludePath>
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveFiller_3.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_CommonPrt.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_BlockIterator.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_DataMapIteratorOfDataMapOfCurveSampleBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveSet.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Section.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BooleanOperations\BooleanOperations_OnceExplorer.cpp'">
+			<IncludePath>..\..\..\drv\BooleanOperations;$(IncludePath)</IncludePath>
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapOfShapeInteger_0.cpp'">
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_ShapeShapeInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_CArray1OfReal_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfShapeEnum_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_StdMapNodeOfMapOfCurveSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Interference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Loop.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IMapOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapOfSWRInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Section.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgoAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgoAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_LoopClassifier.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireEdgeClassifier.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapNodeOfIndexedDataMapOfSWRInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapNodeOfIndexedDataMapOfShapeAncestorsSuccessors_0.cpp'">
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_CurveRangeSample.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListNodeOfListOfEdgeInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_StdMapNodeOfMapOfSurfaceSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfVSInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceOfCommonPrts_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_DSFiller.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_IndexedDataMapNodeOfIndexedDataMapOfSolidClassifier_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_CorrectTolerances.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfRanges_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfShapeEnum_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_PntOnFace.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_CoupleOfIntegerMapHasher.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellFaceClassifier.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Fuse.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgoAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgoAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_QuickSortPave_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_MapIteratorOfMapOfCurveSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfCheckResults_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTColStd\BOPTColStd_Dump.cpp'">
+			<IncludePath>..\..\..\drv\BOPTColStd;$(IncludePath)</IncludePath>
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListIteratorOfListOfCheckResult_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_ListOfListOfShape_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_BuilderTools.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_StateFiller.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_EdgeFace.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfEEInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_Compare.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfCommonBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IDMapOfPaveBlockIMapOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SolidSolidHistoryCollector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListOfLoop_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveFiller.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellSolid.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_SequenceOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_SplitShapesPool_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellSplitter.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListOfSurfaceRangeSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfCommonBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireSolidHistoryCollector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_MapOfCurveSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellSolid_3.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapOfIntegerIndexedMapOfInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfSSInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfCoupleOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIDMapOfPaveBlockIMapOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PCurveMaker.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedMapOfCoupleOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfCoupleOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfPntOn2Faces_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveFiller_1.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_VEInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PointBetween.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListOfCheckResult_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListIteratorOfListOfLoop_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_DataMapOfCurveSampleBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_BeanFaceIntersector.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_LoopSet.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveBlock.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireShell.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BooleanOperations\BooleanOperations_ShapeAndInterferences.cpp'">
+			<IncludePath>..\..\..\drv\BooleanOperations;$(IncludePath)</IncludePath>
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_HistoryCollector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SolidSolid_1.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapNodeOfIndexedDataMapOfShapeInteger_0.cpp'">
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Curve.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_SurfaceRangeLocalizeData.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListOfCurveRangeSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireSolid.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveBlockMapHasher.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShapeSet.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WESCorrector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_SeqOfSeqOfShape_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListOfFaceInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListNodeOfListOfConnexityBlock_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ConnexityBlock.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_DataMapNodeOfDataMapOfCurveSampleBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfInterferenceLine_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_FaceInfo.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SolidClassifier.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_WireStateFiller.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapNodeOfIndexedDataMapOfIntegerIndexedMapOfInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_CheckResult.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_CArray1OfShape_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_Array1OfPave_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfShapeWithState_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Refiner.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_IndexedDataMapOfTransientAddress_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireEdgeSet.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_BlockBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListIteratorOfListOfSurfaceRangeSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceOfPntOn2Faces_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfIntegerState_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Draw.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SolidSolid.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfIntegerDEInfo_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Tools.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfShapeWithState_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SFSCorrector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapOfShapeAncestorsSuccessors_0.cpp'">
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IDMapOfPaveBlockIMapOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_Context.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListOfBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_QuickSortRange_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_Array1OfRange_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListOfListOfLoop_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfPave_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_IndexedDataMapNodeOfIndexedDataMapOfVertexListEdgeInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListIteratorOfListOfCurveRangeSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_AreaBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIDMapOfPaveBlockIMapOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellSolid_2.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_CurveRangeSampleMapHasher.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_MarkedRangeSet.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListNodeOfListOfCurveRangeSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Tools3D_1.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_ShrunkRange.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ArgumentAnalyzer.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListNodeOfListOfSurfaceRangeSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListOfEdgeInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_SurfaceRangeSampleMapHasher.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Tools2D.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BooleanOperations\BooleanOperations_AncestorsSeqAndSuccessorsSeq.cpp'">
+			<IncludePath>..\..\..\drv\BooleanOperations;$(IncludePath)</IncludePath>
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Checker.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_FClass2d.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceOfRoots_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_CurveRangeLocalizeData.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveFiller_4.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_SSInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfCommonBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListIteratorOfListOfListOfLoop_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_DataMapIteratorOfDataMapOfSurfaceSampleBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfPave_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedMapNodeOfIndexedMapOfCoupleOfInteger_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListOfCheckResults_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_RoughShapeIntersector.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedMapNodeOfIMapOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SolidAreaBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_PntOn2Faces.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListNodeOfListOfFaceInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Tools3D.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Area2dBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_FaceAreaBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_InterferencePool.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CArray1OfVVInterference_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_CommonBlockPool_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_MapIteratorOfMapOfSurfaceSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListIteratorOfListOfBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_QuickSort_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_EEInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfCommonPrts_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_FaceFace.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfPave_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfCurves_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BooleanOperations\BooleanOperations_Explorer.cpp'">
+			<IncludePath>..\..\..\drv\BooleanOperations;$(IncludePath)</IncludePath>
+			<Defines>__BooleanOperations_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListOfConnexityBlock_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_PavePool_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_ESInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_ListNodeOfListOfBox_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveBlockIterator.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_ListIteratorOfListOfListOfShape_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_MapOfSurfaceSample_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_EdgeInfo.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_SurfaceRangeSample.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Cut.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgoAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgoAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_SSIntersectionAttribute.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SectionHistoryCollector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTColStd\BOPTColStd_ShapeWithRankHasher.cpp'">
+			<IncludePath>..\..\..\drv\BOPTColStd;$(IncludePath)</IncludePath>
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_CompareRange.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfIntegerPaveSet_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_VSInterference.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_Tools.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfPaveBlock_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListIteratorOfListOfConnexityBlock_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Tools3D_2.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Builder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_BaseRangeSample.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_FaceBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Common.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgoAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgoAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SolidBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_SequenceOfCurves_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_Area3dBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_Curve.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfIntegerPaveSet_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_EmptyBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellSolidHistoryCollector.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTColStd\BOPTColStd_Failure.cpp'">
+			<IncludePath>..\..\..\drv\BOPTColStd;$(IncludePath)</IncludePath>
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_CheckResult.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_Range.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_HArray2OfIntersectionStatus_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_SolidStateFiller.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_IndexedDataMapNodeOfIndexedDataMapOfEdgeListFaceInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfPave_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListNodeOfListOfCheckResult_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfRoots_0.cpp'">
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_CommonBlock.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_Pave.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_DEProcessor.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfCheckResults_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_EdgeEdge.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_TopolTool.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_IteratorOfCoupleOfShape.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTools\BOPTools_Array2OfIntersectionStatus_0.cpp'">
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_LineConstructor.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_IndexedDataMapOfEdgeListFaceInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_SDFWESFiller.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_ShellSolid_1.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_PaveFiller_2.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_DEInfo.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_CompositeClassifier.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_ListNodeOfListOfListOfShape_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListIteratorOfListOfFaceInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_SequenceNodeOfSeqOfSeqOfShape_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_IndexedDataMapOfVertexListEdgeInfo_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapOfIntegerInteger_0.cpp'">
+			<Defines>__BOPTColStd_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_BooleanOperation.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgoAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgoAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOPTools\BOPTools_CoupleOfInteger.cpp'">
+			<IncludePath>..\..\..\drv\BOPTools;$(IncludePath)</IncludePath>
+			<Defines>__BOPTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BOP\BOP_WireShape.cpp'">
+			<IncludePath>..\..\..\drv\BOP;$(IncludePath)</IncludePath>
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntTools\IntTools_Root.cpp'">
+			<IncludePath>..\..\..\drv\IntTools;$(IncludePath)</IncludePath>
+			<Defines>__IntTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BOP\BOP_ListNodeOfListOfListOfLoop_0.cpp'">
+			<Defines>__BOP_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKBRep.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>277</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>284</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG2d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>278</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>279</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>280</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>281</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>282</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKTopAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>283</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapNodeOfIndexedDataMapOfShapeAncestorsSuccessors_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>201</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapNodeOfIndexedDataMapOfShapeInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>202</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapOfShapeAncestorsSuccessors_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>203</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BooleanOperations\BooleanOperations_IndexedDataMapOfShapeInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>204</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_CArray1OfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_CArray1OfPnt2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_CArray1OfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapNodeOfIndexedDataMapOfIntegerIndexedMapOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapNodeOfIndexedDataMapOfIntegerInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapNodeOfIndexedDataMapOfSWRInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapOfIntegerIndexedMapOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapOfIntegerInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_IndexedDataMapOfSWRInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_ListIteratorOfListOfListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_ListNodeOfListOfListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTColStd\BOPTColStd_ListOfListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_Array1OfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_Array2OfIntersectionStatus_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfEEInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfESInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfInterferenceLine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfSSInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfVEInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfVSInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CArray1OfVVInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_CommonBlockPool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_HArray2OfIntersectionStatus_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IDMapOfPaveBlockIMapOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IDMapOfPaveBlockIMapOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IMapOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIDMapOfPaveBlockIMapOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIDMapOfPaveBlockIMapOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfIntegerDEInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfIntegerPaveSet_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfIntegerState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapNodeOfIndexedDataMapOfShapeWithState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfIntegerDEInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfIntegerPaveSet_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfIntegerState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedDataMapOfShapeWithState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedMapNodeOfIMapOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedMapNodeOfIndexedMapOfCoupleOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_IndexedMapOfCoupleOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfCheckResults_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfCommonBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfCoupleOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListIteratorOfListOfShapeEnum_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfCheckResults_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfCommonBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfCoupleOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListNodeOfListOfShapeEnum_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfCheckResults_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfCommonBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfCoupleOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_ListOfShapeEnum_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_PavePool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_QuickSortPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_SequenceNodeOfSequenceOfCurves_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_SequenceNodeOfSequenceOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_SequenceOfCurves_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_SequenceOfPaveBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOPTools\BOPTools_SplitShapesPool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_IndexedDataMapNodeOfIndexedDataMapOfEdgeListFaceInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_IndexedDataMapNodeOfIndexedDataMapOfSolidClassifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_IndexedDataMapNodeOfIndexedDataMapOfVertexListEdgeInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_IndexedDataMapOfEdgeListFaceInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_IndexedDataMapOfSolidClassifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_IndexedDataMapOfVertexListEdgeInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListIteratorOfListOfCheckResult_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListIteratorOfListOfConnexityBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListIteratorOfListOfEdgeInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListIteratorOfListOfFaceInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListIteratorOfListOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListIteratorOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListNodeOfListOfCheckResult_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListNodeOfListOfConnexityBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListNodeOfListOfEdgeInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListNodeOfListOfFaceInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListNodeOfListOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListNodeOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListOfCheckResult_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListOfConnexityBlock_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListOfEdgeInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListOfFaceInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_ListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_SeqOfSeqOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BOP\BOP_SequenceNodeOfSeqOfSeqOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_Array1OfRange_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>233</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_Array1OfRoots_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>234</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_CArray1OfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>235</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_CArray1OfReal_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>236</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_DataMapIteratorOfDataMapOfCurveSampleBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>237</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_DataMapIteratorOfDataMapOfSurfaceSampleBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>238</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_DataMapNodeOfDataMapOfCurveSampleBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>239</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_DataMapNodeOfDataMapOfSurfaceSampleBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>240</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_DataMapOfCurveSampleBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>241</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_DataMapOfSurfaceSampleBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>242</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_IndexedDataMapNodeOfIndexedDataMapOfTransientAddress_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>243</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_IndexedDataMapOfTransientAddress_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>244</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListIteratorOfListOfBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>245</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListIteratorOfListOfCurveRangeSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>246</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListIteratorOfListOfSurfaceRangeSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>247</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListNodeOfListOfBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>248</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListNodeOfListOfCurveRangeSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>249</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListNodeOfListOfSurfaceRangeSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>250</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListOfBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>251</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListOfCurveRangeSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>252</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_ListOfSurfaceRangeSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>253</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_MapIteratorOfMapOfCurveSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>254</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_MapIteratorOfMapOfSurfaceSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>255</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_MapOfCurveSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>256</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_MapOfSurfaceSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>257</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_QuickSortRange_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>258</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_QuickSort_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>259</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfCommonPrts_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>260</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfCurves_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>261</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfPntOn2Faces_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>262</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfRanges_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>263</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceNodeOfSequenceOfRoots_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>264</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceOfCommonPrts_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>265</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceOfCurves_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>266</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceOfPntOn2Faces_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>267</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceOfRanges_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>268</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_SequenceOfRoots_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>269</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_StdMapNodeOfMapOfCurveSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>270</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntTools\IntTools_StdMapNodeOfMapOfSurfaceSample_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>271</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BooleanOperations\BooleanOperations_AncestorsAndSuccessors.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BooleanOperations\BooleanOperations_AncestorsSeqAndSuccessorsSeq.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BooleanOperations\BooleanOperations_Explorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BooleanOperations\BooleanOperations_OnceExplorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>198</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BooleanOperations\BooleanOperations_ShapeAndInterferences.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>199</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BooleanOperations\BooleanOperations_ShapesDataStructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>200</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTColStd\BOPTColStd_Dump.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTColStd\BOPTColStd_Failure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTColStd\BOPTColStd_ShapeWithRank.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTColStd\BOPTColStd_ShapeWithRankHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Checker.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_CheckResult.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_CommonBlock.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_CommonBlockAPI.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_ComparePave.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_CoupleOfInteger.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_CoupleOfIntegerMapHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_DEInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_DEProcessor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_DSFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_EEInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_ESInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Interference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_InterferenceLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_InterferencePool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_IteratorOfCoupleOfShape.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Pave.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveBlock.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveBlockIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveBlockMapHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveFiller_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveFiller_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveFiller_3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveFiller_4.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PaveSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PCurveMaker.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_PointBetween.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_RoughShapeIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_ShapeShapeInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_SolidStateFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_SSInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_SSIntersectionAttribute.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_StateFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Tools.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Tools2D.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Tools3D.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Tools3D_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_Tools3D_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_VEInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_VSInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_VVInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOPTools\BOPTools_WireStateFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Area2dBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Area3dBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_AreaBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ArgumentAnalyzer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_BlockBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_BlockIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_BuilderTools.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_CheckResult.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_CompositeClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ConnexityBlock.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_CorrectTolerances.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Draw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_EdgeInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_EmptyBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_FaceAreaBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_FaceBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_FaceInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_HistoryCollector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Loop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_LoopClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_LoopSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Refiner.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SDFWESFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_Section.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SectionHistoryCollector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SFSCorrector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShapeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellFaceClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellFaceSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellShell.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellSolid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellSolidHistoryCollector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellSolid_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellSolid_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellSolid_3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_ShellSplitter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SolidAreaBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SolidBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SolidClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SolidSolid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SolidSolidHistoryCollector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_SolidSolid_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WESCorrector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireEdgeClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireEdgeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireShape.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireShell.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireSolid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireSolidHistoryCollector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireSplitter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BOP\BOP_WireWire.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_BooleanOperation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>272</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Common.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>273</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Cut.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>274</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Fuse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>275</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgoAPI\BRepAlgoAPI_Section.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>276</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>205</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_BaseRangeSample.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>206</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_BeanBeanIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>207</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_BeanFaceIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>208</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_CommonPrt.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>209</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_Compare.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>210</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_CompareRange.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>211</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_Context.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>212</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_Curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>213</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_CurveRangeLocalizeData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>214</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_CurveRangeSample.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>215</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_CurveRangeSampleMapHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>216</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_EdgeEdge.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>217</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_EdgeFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>218</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_FaceFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>219</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_FClass2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>220</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_LineConstructor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>221</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_MarkedRangeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>222</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_PntOn2Faces.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>223</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_PntOnFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>224</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_Range.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>225</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>226</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_ShrunkRange.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>227</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_SurfaceRangeLocalizeData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>228</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_SurfaceRangeSample.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>229</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_SurfaceRangeSampleMapHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>230</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_Tools.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>231</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntTools\IntTools_TopolTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>232</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

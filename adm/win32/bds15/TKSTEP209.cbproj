@@ -1,0 +1,2020 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\RWStepElement\;..\..\..\drv\StepElement\;..\..\..\src\StepElement\;..\..\..\drv\StepFEA\;..\..\..\src\RWStepFEA\;..\..\..\src\StepFEA\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\RWStepElement\;..\..\..\drv\StepElement\;..\..\..\src\StepElement\;..\..\..\drv\StepFEA\;..\..\..\src\RWStepFEA\;..\..\..\src\StepFEA\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfVolumeElementPurpose_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWConstantSurface3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementSectionDerivedDefinitions.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_NodeDefinition.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfCurveElementEndReleasePacket_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ParametricSurface3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurve3dElementProperty.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSectionFieldConstant.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaModel.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfMeasureOrUnspecifiedValue_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_SymmetricTensor43d.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HSequenceOfElementGeometricRelationship_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HArray1OfCurveElementEndOffset_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HArray1OfNodeRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ConstantSurface3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaModelDefinition.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaParametricPoint.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWSurfaceElementProperty.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementInterval.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_SymmetricTensor23dMember.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSectionField.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceOfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray2OfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_MeasureOrUnspecifiedValueMember.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaModelDefinition.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementEndRelease.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfNodeRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWCurve3dElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementFreedomMember.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfVolumeElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HSequenceOfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FreedomsList.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceOfElementMaterial_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_UniformSurfaceSection.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HSequenceOfCurve3dElementProperty_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_ElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWCurveElementEndReleasePacket.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementEndReleasePacket.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWArbitraryVolume3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray2OfSurfaceElementPurpose_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceOfElementRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWVolume3dElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNodeWithVector.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNodeWithSolutionCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellShearStiffness.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaLinearElasticity.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_Curve3dElementProperty.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSection.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_ElementAspectMember.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_Node.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaGroup.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaParametricPoint.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfVolumeElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceElementPurposeMember.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_NodeGroup.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementIntervalLinearlyVarying.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaShellShearStiffness.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_Surface3dElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNodeGroup.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWVolume3dElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceOfElementGeometricRelationship_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_NodeSet.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_AnalysisItemWithinRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfElementGeometricRelationship_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_Array1OfNodeRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceElementProperty.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWElementGeometricRelationship.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceSectionFieldVarying.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ElementOrElementGroup.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_MeasureOrUnspecifiedValue.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaShellMembraneStiffness.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWUniformSurfaceSection.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaCurveSectionGeometricRelationship.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_AlignedCurve3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_Volume3dElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNodeRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ElementGeometricRelationship.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_Volume3dElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementIntervalConstant.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWParametricCurve3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaLinearElasticity.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_VolumeElementPurposeMember.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HSequenceOfElementRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_ElementMaterial.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ElementGroup.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaShellMembraneBendingCouplingStiffness.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_Array1OfDegreeOfFreedom_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMaterialPropertyRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfHSequenceOfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementLocation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HArray1OfElementRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaTangentialCoefficientOfLinearThermalExpansion.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_Array1OfCurveElementEndOffset_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementLocation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceSectionField.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HSequenceOfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfCurveElementEndReleasePacket_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementIntervalConstant.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfMeasureOrUnspecifiedValue_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceSectionFieldConstant.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array2OfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWSurface3dElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfCurveElementSectionDefinition_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_Array1OfCurveElementInterval_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaRepresentationItem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaTangentialCoefficientOfLinearThermalExpansion.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaMassDensity.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ParametricCurve3dElementCoordinateDirection.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HSequenceOfNodeRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWSurface3dElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfSurfaceSection_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_SymmetricTensor22d.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceOfNodeRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfHSequenceOfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_AlignedSurface3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaMaterialPropertyRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaModel3d.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementPurposeMember.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_Curve3dElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfCurveElementSectionDefinition_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWCurveElementSectionDefinition.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellMembraneStiffness.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaCurveSectionGeometricRelationship.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMoistureAbsorption.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellBendingStiffness.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceOfCurveElementSectionDefinition_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSectionFieldVarying.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaSurfaceSectionGeometricRelationship.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMassDensity.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementEndOffset.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellMembraneBendingCouplingStiffness.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementSectionDefinition.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_VolumeElementPurpose.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWDummyNode.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementInterval.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNode.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HArray1OfCurveElementEndRelease_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurve3dElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfCurve3dElementProperty_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWElementMaterial.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_DummyNode.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementEndCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementIntervalLinearlyVarying.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_SymmetricTensor23d.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfSurfaceSection_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfElementRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWAlignedSurface3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceOfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNodeDefinition.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_GeometricNode.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWParametricCurve3dElementCoordinateDirection.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaSurfaceSectionGeometricRelationship.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaShellBendingStiffness.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMaterialPropertyRepresentationItem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceElementPurpose.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HSequenceOfCurveElementSectionDefinition_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWParametricSurface3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_NodeWithVector.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_NodeWithSolutionCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_CurveElementEndOffset.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_Array1OfCurveElementEndRelease_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HSequenceOfElementMaterial_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWAnalysisItemWithinRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfElementMaterial_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWElementGroup.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_SurfaceSection.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FreedomAndCoefficient.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaAreaDensity.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaAreaDensity.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFreedomAndCoefficient.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_Curve3dElementDescriptor.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_DegreeOfFreedom.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfHSequenceOfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaSecantCoefficientOfLinearThermalExpansion.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HArray1OfCurveElementInterval_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_DegreeOfFreedomMember.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfVolumeElementPurpose_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_NodeRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementEndRelease.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaRepresentationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_Surface3dElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaModel.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array1OfCurveElementSectionDefinition_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_SymmetricTensor43dMember.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ElementRepresentation.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaGroup.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_SequenceOfCurve3dElementProperty_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_ElementAspect.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray1OfHSequenceOfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaSecantCoefficientOfLinearThermalExpansion.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaMoistureAbsorption.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_Array1OfElementRepresentation_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ArbitraryVolume3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array2OfSurfaceElementPurpose_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepElement\RWStepElement_RWCurveElementSectionDerivedDefinitions.cpp'">
+			<IncludePath>..\..\..\drv\RWStepElement;$(IncludePath)</IncludePath>
+			<Defines>__RWStepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_SymmetricTensor42d.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWNodeSet.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaModel3d.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaMaterialPropertyRepresentationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_HArray2OfSurfaceElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFeaAxis2Placement3d.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementPurpose.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_FeaAxis2Placement3d.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepElement\StepElement_Array2OfCurveElementPurposeMember_0.cpp'">
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepFEA\StepFEA_HArray1OfDegreeOfFreedom_0.cpp'">
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepElement\StepElement_CurveElementFreedom.cpp'">
+			<IncludePath>..\..\..\drv\StepElement;$(IncludePath)</IncludePath>
+			<Defines>__StepElement_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepFEA\StepFEA_ParametricCurve3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\StepFEA;$(IncludePath)</IncludePath>
+			<Defines>__StepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWFreedomsList.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWGeometricNode.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepFEA\RWStepFEA_RWAlignedCurve3dElementCoordinateSystem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepFEA;$(IncludePath)</IncludePath>
+			<Defines>__RWStepFEA_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>217</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKSTEPBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>215</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKXSBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>216</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfCurveElementEndReleasePacket_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfCurveElementSectionDefinition_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfHSequenceOfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfHSequenceOfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfMeasureOrUnspecifiedValue_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfSurfaceSection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfVolumeElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array1OfVolumeElementPurpose_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array2OfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array2OfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_Array2OfSurfaceElementPurpose_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfCurveElementEndReleasePacket_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfCurveElementSectionDefinition_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfHSequenceOfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfHSequenceOfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfMeasureOrUnspecifiedValue_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfSurfaceSection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfVolumeElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray1OfVolumeElementPurpose_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray2OfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray2OfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HArray2OfSurfaceElementPurpose_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HSequenceOfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HSequenceOfCurveElementSectionDefinition_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HSequenceOfElementMaterial_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_HSequenceOfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfCurveElementSectionDefinition_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfElementMaterial_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceNodeOfSequenceOfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceOfCurveElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceOfCurveElementSectionDefinition_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceOfElementMaterial_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepElement\StepElement_SequenceOfSurfaceElementPurposeMember_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_Array1OfCurveElementEndOffset_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_Array1OfCurveElementEndRelease_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_Array1OfCurveElementInterval_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_Array1OfDegreeOfFreedom_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_Array1OfElementRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_Array1OfNodeRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HArray1OfCurveElementEndOffset_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HArray1OfCurveElementEndRelease_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HArray1OfCurveElementInterval_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HArray1OfDegreeOfFreedom_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HArray1OfElementRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HArray1OfNodeRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HSequenceOfCurve3dElementProperty_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HSequenceOfElementGeometricRelationship_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HSequenceOfElementRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_HSequenceOfNodeRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfCurve3dElementProperty_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfElementGeometricRelationship_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfElementRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceNodeOfSequenceOfNodeRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceOfCurve3dElementProperty_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceOfElementGeometricRelationship_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceOfElementRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepFEA\StepFEA_SequenceOfNodeRepresentation_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWAnalysisItemWithinRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWCurve3dElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWCurveElementEndReleasePacket.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWCurveElementSectionDefinition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWCurveElementSectionDerivedDefinitions.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWElementMaterial.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWSurface3dElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWSurfaceElementProperty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSectionField.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSectionFieldConstant.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWSurfaceSectionFieldVarying.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWUniformSurfaceSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepElement\RWStepElement_RWVolume3dElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWAlignedCurve3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWAlignedSurface3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWArbitraryVolume3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWConstantSurface3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurve3dElementProperty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurve3dElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementEndOffset.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementEndRelease.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementInterval.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementIntervalConstant.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementIntervalLinearlyVarying.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWCurveElementLocation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWDummyNode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWElementGeometricRelationship.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWElementGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaAreaDensity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaAxis2Placement3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaCurveSectionGeometricRelationship.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaLinearElasticity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMassDensity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMaterialPropertyRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMaterialPropertyRepresentationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaModel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaModel3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaModelDefinition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaMoistureAbsorption.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaParametricPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaRepresentationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaSecantCoefficientOfLinearThermalExpansion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellBendingStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellMembraneBendingCouplingStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellMembraneStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaShellShearStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaSurfaceSectionGeometricRelationship.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>198</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFeaTangentialCoefficientOfLinearThermalExpansion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>199</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFreedomAndCoefficient.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>200</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWFreedomsList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>201</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWGeometricNode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>202</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>203</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNodeDefinition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>204</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNodeGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>205</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNodeRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>206</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNodeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>207</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNodeWithSolutionCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>208</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWNodeWithVector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>209</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWParametricCurve3dElementCoordinateDirection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>210</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWParametricCurve3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>211</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWParametricSurface3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>212</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWSurface3dElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>213</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepFEA\RWStepFEA_RWVolume3dElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>214</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_AnalysisItemWithinRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_Curve3dElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementEndReleasePacket.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementFreedom.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementFreedomMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementPurpose.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementPurposeMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementSectionDefinition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_CurveElementSectionDerivedDefinitions.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_ElementAspect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_ElementAspectMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_ElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_ElementMaterial.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_MeasureOrUnspecifiedValue.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_MeasureOrUnspecifiedValueMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_Surface3dElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceElementProperty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceElementPurpose.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceElementPurposeMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceSectionField.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceSectionFieldConstant.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_SurfaceSectionFieldVarying.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_UniformSurfaceSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_Volume3dElementDescriptor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_VolumeElementPurpose.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepElement\StepElement_VolumeElementPurposeMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_AlignedCurve3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_AlignedSurface3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ArbitraryVolume3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ConstantSurface3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_Curve3dElementProperty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_Curve3dElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementEndCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementEndOffset.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementEndRelease.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementInterval.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementIntervalConstant.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementIntervalLinearlyVarying.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_CurveElementLocation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_DegreeOfFreedom.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_DegreeOfFreedomMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_DummyNode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ElementGeometricRelationship.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ElementGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ElementOrElementGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaAreaDensity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaAxis2Placement3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaCurveSectionGeometricRelationship.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaLinearElasticity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaMassDensity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaMaterialPropertyRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaMaterialPropertyRepresentationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaModel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaModel3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaModelDefinition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaMoistureAbsorption.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaParametricPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaRepresentationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaSecantCoefficientOfLinearThermalExpansion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaShellBendingStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaShellMembraneBendingCouplingStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaShellMembraneStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaShellShearStiffness.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaSurfaceSectionGeometricRelationship.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FeaTangentialCoefficientOfLinearThermalExpansion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FreedomAndCoefficient.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_FreedomsList.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_GeometricNode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_Node.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_NodeDefinition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_NodeGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_NodeRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_NodeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_NodeWithSolutionCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_NodeWithVector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ParametricCurve3dElementCoordinateDirection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ParametricCurve3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_ParametricSurface3dElementCoordinateSystem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_Surface3dElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_SymmetricTensor22d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_SymmetricTensor23d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_SymmetricTensor23dMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_SymmetricTensor42d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_SymmetricTensor43d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_SymmetricTensor43dMember.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepFEA\StepFEA_Volume3dElementRepresentation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

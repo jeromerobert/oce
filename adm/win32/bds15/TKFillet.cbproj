@@ -1,0 +1,1345 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\Blend\;..\..\..\drv\Blend\;..\..\..\src\BRepFilletAPI\;..\..\..\src\BRepBlend\;..\..\..\drv\BRepBlend\;..\..\..\src\BlendFunc\;..\..\..\src\ChFiKPart\;..\..\..\drv\ChFiKPart\;..\..\..\src\FilletSurf\;..\..\..\drv\ChFiDS\;..\..\..\src\ChFi2d\;..\..\..\src\ChFiDS\;..\..\..\src\ChFi3d\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\Blend\;..\..\..\drv\Blend\;..\..\..\src\BRepFilletAPI\;..\..\..\src\BRepBlend\;..\..\..\drv\BRepBlend\;..\..\..\src\BlendFunc\;..\..\..\src\ChFiKPart\;..\..\..\drv\ChFiKPart\;..\..\..\src\FilletSurf\;..\..\..\drv\ChFiDS\;..\..\..\src\ChFi2d\;..\..\..\src\ChFiDS\;..\..\..\src\ChFi3d\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChAsymPlnCyl.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_CommonPoint.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_HCurve2dTool_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_Tensor.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_FilBuilder_C2.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_AppFunction.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfPointEvolRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListIteratorOfRegularities_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_FaceInterference.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_Point.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_Fcts.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_2.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_SequenceOfSpine_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_Regul.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_FilBuilder_C3.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_CnCrn.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_SequenceOfLine_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfRstEvolRad.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiKPart\ChFiKPart_RstMap_0.cpp'">
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_FilPlnCyl.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_FilSpine.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_ChamfSpine.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListIteratorOfListOfStripe_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_StripeMap.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_Line_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_IndexedDataMapOfVertexListOfStripe_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_SequenceNodeOfSequenceOfLine_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_ElSpine.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_SequenceNodeOfSequenceOfSurfData_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListNodeOfRegularities_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_ChBuilder_C2.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_Walking_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_BlendTool.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_Stripe.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_ChAsym.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_StripeArray1_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfCurvEvolRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_SurfData.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi2d\ChFi2d_Builder_0.cpp'">
+			<IncludePath>..\..\..\drv\ChFi2d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_SurfCurvFuncInv.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListNodeOfListOfHElSpine_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_SequenceNodeOfSequenceOfPointOnRst_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_C2.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFilletAPI\BRepFilletAPI_MakeChamfer.cpp'">
+			<IncludePath>..\..\..\drv\BRepFilletAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepFilletAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_AppFuncRoot.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_6.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFilletAPI\BRepFilletAPI_MakeFillet2d.cpp'">
+			<IncludePath>..\..\..\drv\BRepFilletAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepFilletAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChPlnCon.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Debug.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_RstRstEvolRad.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_RstRstFunction.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_CSConstRad.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_EvolRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_AppSurf_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_FilBuilder.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_SecHArray1_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Blend\Blend_SequenceNodeOfSequenceOfPoint_0.cpp'">
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_CSFunction.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_HCurveTool_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiKPart\ChFiKPart_DataMapIteratorOfRstMap_0.cpp'">
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_FilPlnCon.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChPlnCyl.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_CS.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_FilPlnPln.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_SurfPointFuncInv.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_AppSurface.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_C1.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChAsymPlnCon.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_Debug.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_HElSpine_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_Spine.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_Rotule.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_AppFunc.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_CurvPointRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi2d\ChFi2d.cpp'">
+			<IncludePath>..\..\..\drv\ChFi2d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfRstConstRad.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_CSWalking_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_ChamfInv.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_SequenceOfPointOnRst_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_Chamfer.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_Corde.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFilletAPI\BRepFilletAPI_LocalOperation.cpp'">
+			<IncludePath>..\..\..\drv\BRepFilletAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepFilletAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_Map.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_IndexedDataMapNodeOfIndexedDataMapOfVertexListOfStripe_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FilletSurf\FilletSurf_Builder.cpp'">
+			<IncludePath>..\..\..\drv\FilletSurf;$(IncludePath)</IncludePath>
+			<Defines>__FilletSurf_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_NotImp.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfRstLineBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_1.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_RstRstConstRad.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_ChAsymInv.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListOfHElSpine_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi2d\ChFi2d_Builder.cpp'">
+			<IncludePath>..\..\..\drv\ChFi2d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_SequenceNodeOfSequenceOfSpine_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfPointConstRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_SurfRstFunction.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_CurvPointFuncInv.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_Function.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_RuledInv.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFilletAPI\BRepFilletAPI_MakeFillet.cpp'">
+			<IncludePath>..\..\..\drv\BRepFilletAPI;$(IncludePath)</IncludePath>
+			<Defines>__BRepFilletAPI_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChPlnPln.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_ConstRad.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_SpKP.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_SecArray1_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_AppFuncRstRst.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_Regularities_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FilletSurf\FilletSurf_InternalBuilder.cpp'">
+			<IncludePath>..\..\..\drv\FilletSurf;$(IncludePath)</IncludePath>
+			<Defines>__FilletSurf_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiDS\ChFiDS_CircSection.cpp'">
+			<IncludePath>..\..\..\drv\ChFiDS;$(IncludePath)</IncludePath>
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiKPart\ChFiKPart_DataMapNodeOfRstMap_0.cpp'">
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_RstRstLineBuilder.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_ChBuilder.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_PointOnRst_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListIteratorOfListOfHElSpine_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChAsymPlnPln.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_AppFuncRst.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_Ruled.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_HData_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_SequenceOfSurfData_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_EvolRad.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepBlend\BRepBlend_Extremity_0.cpp'">
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Blend\Blend_SequenceOfPoint_0.cpp'">
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_Builder_0.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_CSCircular.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepBlend\BRepBlend_SurfCurvConstRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BRepBlend;$(IncludePath)</IncludePath>
+			<Defines>__BRepBlend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListOfStripe_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_SearchSing.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Blend\Blend_FuncInv.cpp'">
+			<IncludePath>..\..\..\drv\Blend;$(IncludePath)</IncludePath>
+			<Defines>__Blend_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BlendFunc\BlendFunc_ConstRadInv.cpp'">
+			<IncludePath>..\..\..\drv\BlendFunc;$(IncludePath)</IncludePath>
+			<Defines>__BlendFunc_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFi3d\ChFi3d_ChBuilder_C3.cpp'">
+			<IncludePath>..\..\..\drv\ChFi3d;$(IncludePath)</IncludePath>
+			<Defines>__ChFi3d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ChFiDS\ChFiDS_ListNodeOfListOfStripe_0.cpp'">
+			<Defines>__ChFiDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_Sphere.cpp'">
+			<IncludePath>..\..\..\drv\ChFiKPart;$(IncludePath)</IncludePath>
+			<Defines>__ChFiKPart_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKBool.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>136</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKBRep.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>135</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>143</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG2d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>137</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>138</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>139</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>140</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>141</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKTopAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>142</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\Blend\Blend_SequenceNodeOfSequenceOfPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Blend\Blend_SequenceOfPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_AppSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_CSWalking_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_Extremity_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_HCurve2dTool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_HCurveTool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_Line_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_PointOnRst_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_SequenceNodeOfSequenceOfLine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_SequenceNodeOfSequenceOfPointOnRst_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_SequenceOfLine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_SequenceOfPointOnRst_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepBlend\BRepBlend_Walking_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_HData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_HElSpine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_IndexedDataMapNodeOfIndexedDataMapOfVertexListOfStripe_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_IndexedDataMapOfVertexListOfStripe_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListIteratorOfListOfHElSpine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListIteratorOfListOfStripe_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListIteratorOfRegularities_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListNodeOfListOfHElSpine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListNodeOfListOfStripe_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListNodeOfRegularities_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListOfHElSpine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_ListOfStripe_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_Regularities_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_SecArray1_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_SecHArray1_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_SequenceNodeOfSequenceOfSpine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_SequenceNodeOfSequenceOfSurfData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_SequenceOfSpine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_SequenceOfSurfData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiDS\ChFiDS_StripeArray1_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiKPart\ChFiKPart_DataMapIteratorOfRstMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiKPart\ChFiKPart_DataMapNodeOfRstMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ChFiKPart\ChFiKPart_RstMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_Chamfer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_ChamfInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_ChAsym.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_ChAsymInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_ConstRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_ConstRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_Corde.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_CSCircular.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_CSConstRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_EvolRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_EvolRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_Ruled.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_RuledInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BlendFunc\BlendFunc_Tensor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_AppFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_CSFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_CurvPointFuncInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_Debug.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_FuncInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_Function.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_Point.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_RstRstFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_SurfCurvFuncInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_SurfPointFuncInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Blend\Blend_SurfRstFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_AppFunc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_AppFuncRoot.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_AppFuncRst.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_AppFuncRstRst.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_AppSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_BlendTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_CurvPointRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_RstRstConstRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_RstRstEvolRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_RstRstLineBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfCurvConstRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfCurvEvolRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfPointConstRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfPointEvolRadInv.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfRstConstRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfRstEvolRad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepBlend\BRepBlend_SurfRstLineBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFilletAPI\BRepFilletAPI_LocalOperation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFilletAPI\BRepFilletAPI_MakeChamfer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFilletAPI\BRepFilletAPI_MakeFillet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFilletAPI\BRepFilletAPI_MakeFillet2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi2d\ChFi2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi2d\ChFi2d_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi2d\ChFi2d_Builder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_6.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_C1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_C2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_CnCrn.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_NotImp.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Builder_SpKP.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_ChBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_ChBuilder_C2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_ChBuilder_C3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_Debug.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_FilBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_FilBuilder_C2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_FilBuilder_C3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFi3d\ChFi3d_SearchSing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_ChamfSpine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_CircSection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_CommonPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_ElSpine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_FaceInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_FilSpine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_Map.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_Regul.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_Spine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_Stripe.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_StripeMap.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiDS\ChFiDS_SurfData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChAsymPlnCon.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChAsymPlnCyl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChAsymPlnPln.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChPlnCon.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChPlnCyl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_ChPlnPln.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_CS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_Fcts.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_FilPlnCon.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_FilPlnCyl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_FilPlnPln.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_Rotule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ChFiKPart\ChFiKPart_ComputeData_Sphere.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FilletSurf\FilletSurf_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FilletSurf\FilletSurf_InternalBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

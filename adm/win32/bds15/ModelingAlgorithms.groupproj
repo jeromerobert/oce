@@ -1,0 +1,168 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A44B8462-CD3A-449F-B514-0A2E5245FB2E}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TKGeomAlgo.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKTopAlgo.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKPrim.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKBO.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKHLR.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKMesh.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKShHealing.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKBool.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXMesh.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKFillet.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKFeat.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKOffset.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TKGeomAlgo">
+			<MSBuild Projects="TKGeomAlgo.cbproj"/>
+		</Target>
+		<Target Name="TKGeomAlgo:Clean">
+			<MSBuild Projects="TKGeomAlgo.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKGeomAlgo:Make">
+			<MSBuild Projects="TKGeomAlgo.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKTopAlgo">
+			<MSBuild Projects="TKTopAlgo.cbproj"/>
+		</Target>
+		<Target Name="TKTopAlgo:Clean">
+			<MSBuild Projects="TKTopAlgo.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKTopAlgo:Make">
+			<MSBuild Projects="TKTopAlgo.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKPrim">
+			<MSBuild Projects="TKPrim.cbproj"/>
+		</Target>
+		<Target Name="TKPrim:Clean">
+			<MSBuild Projects="TKPrim.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKPrim:Make">
+			<MSBuild Projects="TKPrim.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKBO">
+			<MSBuild Projects="TKBO.cbproj"/>
+		</Target>
+		<Target Name="TKBO:Clean">
+			<MSBuild Projects="TKBO.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKBO:Make">
+			<MSBuild Projects="TKBO.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKHLR">
+			<MSBuild Projects="TKHLR.cbproj"/>
+		</Target>
+		<Target Name="TKHLR:Clean">
+			<MSBuild Projects="TKHLR.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKHLR:Make">
+			<MSBuild Projects="TKHLR.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKMesh">
+			<MSBuild Projects="TKMesh.cbproj"/>
+		</Target>
+		<Target Name="TKMesh:Clean">
+			<MSBuild Projects="TKMesh.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKMesh:Make">
+			<MSBuild Projects="TKMesh.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKShHealing">
+			<MSBuild Projects="TKShHealing.cbproj"/>
+		</Target>
+		<Target Name="TKShHealing:Clean">
+			<MSBuild Projects="TKShHealing.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKShHealing:Make">
+			<MSBuild Projects="TKShHealing.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKBool">
+			<MSBuild Projects="TKBool.cbproj"/>
+		</Target>
+		<Target Name="TKBool:Clean">
+			<MSBuild Projects="TKBool.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKBool:Make">
+			<MSBuild Projects="TKBool.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXMesh">
+			<MSBuild Projects="TKXMesh.cbproj"/>
+		</Target>
+		<Target Name="TKXMesh:Clean">
+			<MSBuild Projects="TKXMesh.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXMesh:Make">
+			<MSBuild Projects="TKXMesh.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKFillet">
+			<MSBuild Projects="TKFillet.cbproj"/>
+		</Target>
+		<Target Name="TKFillet:Clean">
+			<MSBuild Projects="TKFillet.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKFillet:Make">
+			<MSBuild Projects="TKFillet.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKFeat">
+			<MSBuild Projects="TKFeat.cbproj"/>
+		</Target>
+		<Target Name="TKFeat:Clean">
+			<MSBuild Projects="TKFeat.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKFeat:Make">
+			<MSBuild Projects="TKFeat.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKOffset">
+			<MSBuild Projects="TKOffset.cbproj"/>
+		</Target>
+		<Target Name="TKOffset:Clean">
+			<MSBuild Projects="TKOffset.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKOffset:Make">
+			<MSBuild Projects="TKOffset.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TKGeomAlgo;TKTopAlgo;TKPrim;TKBO;TKHLR;TKMesh;TKShHealing;TKBool;TKXMesh;TKFillet;TKFeat;TKOffset"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TKGeomAlgo:Clean;TKTopAlgo:Clean;TKPrim:Clean;TKBO:Clean;TKHLR:Clean;TKMesh:Clean;TKShHealing:Clean;TKBool:Clean;TKXMesh:Clean;TKFillet:Clean;TKFeat:Clean;TKOffset:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TKGeomAlgo:Make;TKTopAlgo:Make;TKPrim:Make;TKBO:Make;TKHLR:Make;TKMesh:Make;TKShHealing:Make;TKBool:Make;TKXMesh:Make;TKFillet:Make;TKFeat:Make;TKOffset:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

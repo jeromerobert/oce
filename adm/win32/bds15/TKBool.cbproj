@@ -1,0 +1,3588 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\TopOpeBRepDS\;..\..\..\drv\TopOpeBRepDS\;..\..\..\src\TopOpeBRepBuild\;..\..\..\drv\TopOpeBRepBuild\;..\..\..\drv\BRepFill\;..\..\..\src\BRepFill\;..\..\..\src\BRepProj\;..\..\..\src\BRepAlgo\;..\..\..\drv\BRepAlgo\;..\..\..\drv\TopOpeBRep\;..\..\..\src\TopOpeBRep\;..\..\..\src\TopOpeBRepTool\;..\..\..\drv\TopOpeBRepTool\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\TopOpeBRepDS\;..\..\..\drv\TopOpeBRepDS\;..\..\..\src\TopOpeBRepBuild\;..\..\..\drv\TopOpeBRepBuild\;..\..\..\drv\BRepFill\;..\..\..\src\BRepFill\;..\..\..\src\BRepProj\;..\..\..\src\BRepAlgo\;..\..\..\drv\BRepAlgo\;..\..\..\drv\TopOpeBRep\;..\..\..\src\TopOpeBRep\;..\..\..\src\TopOpeBRepTool\;..\..\..\drv\TopOpeBRepTool\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_MultiLine.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_DSS.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FFDumper.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfNodeDataMapOfShapeShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuildFaces.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_DataMapOfTopolTool_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_DRAW.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_matter.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_EdgesIntersector.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfPave_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_SolidClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_REGUS.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FaceEdgeIntersector.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_End.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Tools_1.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_box.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_trace.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfOrientedShapeListOfShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GridEE.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_Bipoint.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_makeedges.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapNodeOfDataMapOfShapeListOfC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_DRAW.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_HArray1OfLineInter_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_trace.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Explorer.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_1.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FilterEdgeInterferences.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_SequenceNodeOfSequenceOfEdgeFaceAndOrder_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_InterferenceIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfCheckStatus_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_KPart.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_SC.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfPoint_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EXPORT.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SolidSurfaceInterference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfShapeSequenceOfPnt_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurveIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_SREGU.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShellFaceSet.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_DataMapOfShapeListOfShapeListOfShape_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Area3dBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_on.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_faulty.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_PaveSet.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapOfOrientedShapeListOfShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Pave.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FuseFace.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_STATE.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShapeSet.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfShapeSequenceOfReal_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_DataMapOfShapeInterference_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfShapeState_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfShapeBox2d_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_IndexedDataMapOfShapeVertexInfo_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_SectionLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ShapeSurface_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepProj\BRepProj_Projection.cpp'">
+			<IncludePath>..\..\..\drv\BRepProj;$(IncludePath)</IncludePath>
+			<Defines>__BRepProj_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_ShapeIntersector2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapNodeOfDataMapOfShapeface_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfCheckStatus_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_GeometryData.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Marker.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfNodeShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FFTransitionTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_EdgeConnector.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_DataMapIteratorOfDataMapOfTopolTool_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_SequenceOfPoint2d_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_InterferenceTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_PointGeomTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfInterferenceShape_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_GeomTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_ListNodeOfListOfC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_DataMapIteratorOfDataMapOfShapeBoolean_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_kpart.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_HArray1OfVPointInter_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfShapeBox_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_face.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapNodeOfMapOfShapeData_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ListNodeOfListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_WireToFace.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Surface.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_REGUW.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_NSections.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfShapeListOfShapeOn1State_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_OffsetAncestors.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_ShapeScanner.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_TrimEdgeTool.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FilterFaceInterferences.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FaceEdgeInterference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Tools.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_IndexedDataMapNodeOfIndexedDataMapOfShapeVertexInfo_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_tol.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EdgeInterferenceTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_makeTransition.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfShapeState_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_traceSIFF.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ffsfs.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_GeomTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_OffsetWire.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder1_2.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Section.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Generator.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfCheckStatus_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_SequenceNodeOfSequenceOfFaceAndOrder_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfPave_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapOfOrientedShapeC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfShapeListOfShapeOn1State_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Draft.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DoubleMapIteratorOfDoubleMapOfIntegerShape_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GridFF.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_fctwes.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfShapeListOfShape_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ProcessFaceInterferences.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_CLASSI.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Pipe.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FIR.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapIteratorOfDataMapOfShapeface_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Curve.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_VPointInter.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_ShapeClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_WPointInter.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_Hctxee2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EdgeVertexInterference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DoubleMapOfIntegerShape_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfInterferenceShape_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfCurve_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_AreaBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_makesolids.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_PointExplorer.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_WPointInterIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_MultiLineTool.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfListOfLoop_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GIter.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FacesFiller_1.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurveExplorer.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Point.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfShapeSequenceOfPnt_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapIteratorOfDataMapOfOrientedShapeC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_TrimSurfaceTool.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_DataMapNodeOfDataMapOfShapeBoolean_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Filter.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_funk.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Section.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfSurface_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Interference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_BuildTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_PointClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_HArray1OfDataMapOfIntegerListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapNodeOfIndexedDataMapOfVertexPoint_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_SolidAreaBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_NormalProjection.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_BooleanOperation.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_Array1OfDataMapOfIntegerListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_TOOL.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_SequenceNodeOfSequenceOfSequenceOfInteger_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_DataMapNodeOfDataMapOfShapeListOfShapeListOfShape_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_MyLeastSquareOfComputeCLine_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Transition.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfIntegerShapeData_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfShapeListOfShape_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_ListIteratorOfListOfBipoint_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfSolidClassifier_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Area2dBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_trace.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FacesIntersector.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_vprdeg.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_HBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfListOfLoop_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Tool.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfInterferenceListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfPave_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Loop.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FacesFiller.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfShapeSurface_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FilterCurveInterferences.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Common.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_EdgeBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_CORRISO.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_PointIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfLoop_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EIR.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_CompatibleWires.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfIntegerShapeData_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_vprclo.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_ListIteratorOfListOfOffsetWire_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceData.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Griddump.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapOfNodeDataMapOfShapeShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfShapeconnexity_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_CompositeClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_connexity.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_BooleanOperations.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Edge3DLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_DataMapNodeOfDataMapOfTopolTool_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_connex.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_VPointInterClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FREGU.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_PurgeInternalEdges.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_keep.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_C2DF.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_vpr.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfIntegerListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_GEOMETRY.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfIntegerListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_SequenceOfSequenceOfInteger_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_PaveClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_TKI.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_DRAW.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceExplorer.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfPoint_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FaceBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_RegularizeW.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Sweep.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Area1dBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfShapeState_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FaceEdgeFiller.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_SequenceOfFaceAndOrder_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_SequenceOfSection_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_traceBOOPNINT.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ProcessEdgeInterferences.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_SequenceNodeOfSequenceOfSection_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ShapeData.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_PROJECT.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_ListOfOffsetWire_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder1_1.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_HBoxTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfListOfLoop_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_ComputeCLine_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_trace.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuilderON2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShellFaceClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_sort.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShapeListOfShape.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_CurveConstraint.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_EdgesIntersector_1.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuildEdges.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_traceALWL.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_DataMapIteratorOfDataMapOfShapeListOfShapeListOfShape_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_VertexInfo.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_DSAccess.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Check.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ProcessInterferencesTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_DataStructure.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapOfShapeSequenceOfReal_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfShapeData_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfIntegerListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_DataMapIteratorOfDataMapOfShapeInterference_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ShapeWithState.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_FuseEdges.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShellToSolid.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfLoop_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Grid.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_FaceAndOrder.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfShapeListOfShapeOn1State_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_LocationLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfIntegerShapeData_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Cut.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapOfShapeWithState_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_FaceRestrictor.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfCurve_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_samdom.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_LoopSet.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_SolidBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Image.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_DataMapOfShapeBoolean_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_ShapeLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_ACRLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FacesFiller_VPonR.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_TOPOLOGY.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapNodeOfDataMapOfOrientedShapeC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_AsDes.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Dumper.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_traceDSX.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuildVertices.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfShapeListOfShape_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_EdgeFaceAndOrder.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfShapeSequenceOfReal_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_AncestorsTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurvePointInterference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfShapeconnexity_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_ShapeExplorer.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfLoop_0.cpp'">
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_WireEdgeSet.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_Point2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfInterferenceListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BlockIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceCurveInterference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfInterferenceListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapNodeOfIndexedDataMapOfShapeWithState_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_SectionPlacement.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_redu.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuilderON.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_PointData.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_kpkole.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Reducer.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_CurveTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_CorrectFace2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Section.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_ListOfC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GridSS.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_SequenceOfEdgeFaceAndOrder_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapOfShapeSequenceOfPnt_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapOfVertexPoint_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_ListOfBipoint_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BlockBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_ShapeIntersector.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ffwesk.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_TopOpe.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapOfShapeListOfC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_repvg.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfInterferenceShape_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_Array1OfLineInter_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Loop.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_EdgesFiller.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Tools2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_TrimShellCorner.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ListIteratorOfListOfInterference_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_ListIteratorOfListOfC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Merge.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepAlgo\BRepAlgo_DataMapNodeOfDataMapOfShapeInterference_0.cpp'">
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FaceInterferenceTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_ListNodeOfListOfBipoint_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_EdgeOnSurfLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_DraftLaw.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfNodeDataMapOfShapeShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DoubleMapNodeOfDoubleMapOfIntegerShape_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurveData.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_PipeShell.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_BoxSort.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_makefaces.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfSurface_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_TOOL.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_FaceEdgeFiller_DEB.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfSurface_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapIteratorOfDataMapOfShapeListOfC2DF_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_ApproxSeewing.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfShapeBox2d_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapOfNodeShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_WireEdgeClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_LineInter.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfShapeDataMapOfShapeListOfShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_SequenceNodeOfSequenceOfPoint2d_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GTopo.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapOfShapeface_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Association.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_ProcessGR.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_closing.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfSolidClassifier_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepAlgo\BRepAlgo_Fuse.cpp'">
+			<IncludePath>..\..\..\drv\BRepAlgo;$(IncludePath)</IncludePath>
+			<Defines>__BRepAlgo_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_mergePDS.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_reDEB.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_GapFiller.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfNodeShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_HDataStructure.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_DSFiller.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfShapeDataMapOfShapeListOfShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_traceSTATE.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_ListNodeOfListOfOffsetWire_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Evolved.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_PURGE.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ShapeShapeInterference.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BRepFill\BRepFill_Filling.cpp'">
+			<IncludePath>..\..\..\drv\BRepFill;$(IncludePath)</IncludePath>
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FaceAreaBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_RegularizeS.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRep\TopOpeBRep_Array1OfVPointInter_0.cpp'">
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_Hctxff2d.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_GapTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_LoopClassifier.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder1.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapOfShapeDataMapOfShapeListOfShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_VPointInterIterator.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfPoint_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepBuild;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepBuild_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRep\TopOpeBRep_ProcessSectionEdges.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRep;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfShapeSurface_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfCurve_0.cpp'">
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfOrientedShapeListOfShape_0.cpp'">
+			<Defines>__BRepFill_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_ShapeTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_mkTondgE.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepTool;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Edge3dInterferenceTool.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ListOfShapeOn1State.cpp'">
+			<IncludePath>..\..\..\drv\TopOpeBRepDS;$(IncludePath)</IncludePath>
+			<Defines>__TopOpeBRepDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfShapeBox_0.cpp'">
+			<Defines>__TopOpeBRepTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKBO.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>394</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKBRep.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>395</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>404</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG2d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>396</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>397</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>398</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>399</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>400</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKPrim.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>401</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKShHealing.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>402</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKTopAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>403</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_DataMapIteratorOfDataMapOfShapeBoolean_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>326</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_DataMapIteratorOfDataMapOfShapeInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>327</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_DataMapNodeOfDataMapOfShapeBoolean_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>328</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_DataMapNodeOfDataMapOfShapeInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>329</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_DataMapOfShapeBoolean_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>330</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_DataMapOfShapeInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>331</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_SequenceNodeOfSequenceOfSequenceOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>332</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepAlgo\BRepAlgo_SequenceOfSequenceOfInteger_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>333</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_ComputeCLine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>364</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfNodeDataMapOfShapeShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>365</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfNodeShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>366</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfOrientedShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>367</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfShapeDataMapOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>368</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfShapeSequenceOfPnt_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>369</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapIteratorOfDataMapOfShapeSequenceOfReal_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>370</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfNodeDataMapOfShapeShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>371</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfNodeShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>372</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfOrientedShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>373</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfShapeDataMapOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>374</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfShapeSequenceOfPnt_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>375</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapNodeOfDataMapOfShapeSequenceOfReal_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>376</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapOfNodeDataMapOfShapeShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>377</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapOfNodeShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>378</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapOfOrientedShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>379</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapOfShapeDataMapOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>380</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapOfShapeSequenceOfPnt_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>381</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_DataMapOfShapeSequenceOfReal_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>382</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_ListIteratorOfListOfOffsetWire_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>383</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_ListNodeOfListOfOffsetWire_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>384</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_ListOfOffsetWire_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>385</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_MyLeastSquareOfComputeCLine_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>386</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_SequenceNodeOfSequenceOfEdgeFaceAndOrder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>387</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_SequenceNodeOfSequenceOfFaceAndOrder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>388</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_SequenceNodeOfSequenceOfSection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>389</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_SequenceOfEdgeFaceAndOrder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>390</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_SequenceOfFaceAndOrder_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>391</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\BRepFill\BRepFill_SequenceOfSection_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>392</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_DataMapIteratorOfDataMapOfShapeListOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>233</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_DataMapNodeOfDataMapOfShapeListOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>234</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_DataMapOfShapeListOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>235</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_IndexedDataMapNodeOfIndexedDataMapOfShapeVertexInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>236</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_IndexedDataMapOfShapeVertexInfo_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>237</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>238</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>239</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>240</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListIteratorOfListOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>241</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>242</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>243</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>244</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListNodeOfListOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>245</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>246</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfLoop_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>247</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfPave_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>248</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepBuild\TopOpeBRepBuild_ListOfShapeListOfShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>249</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_Array1OfDataMapOfIntegerListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfCheckStatus_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfIntegerListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfInterferenceListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfInterferenceShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfShapeListOfShapeOn1State_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfDataMapOfShapeState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfIntegerShapeData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfMapOfSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapIteratorOfShapeSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfCheckStatus_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfIntegerListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfInterferenceListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfInterferenceShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfShapeListOfShapeOn1State_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfDataMapOfShapeState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfIntegerShapeData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfMapOfSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapNodeOfShapeSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfCheckStatus_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfIntegerListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfInterferenceListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfInterferenceShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfShapeListOfShapeOn1State_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DataMapOfShapeState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DoubleMapIteratorOfDoubleMapOfIntegerShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DoubleMapNodeOfDoubleMapOfIntegerShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_DoubleMapOfIntegerShape_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_HArray1OfDataMapOfIntegerListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapNodeOfIndexedDataMapOfShapeWithState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapNodeOfIndexedDataMapOfVertexPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapNodeOfMapOfShapeData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapOfShapeWithState_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_IndexedDataMapOfVertexPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ListIteratorOfListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ListNodeOfListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ListOfInterference_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfIntegerShapeData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfShapeData_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_MapOfSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepDS\TopOpeBRepDS_ShapeSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapIteratorOfDataMapOfOrientedShapeC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>289</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapIteratorOfDataMapOfShapeface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>290</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapIteratorOfDataMapOfShapeListOfC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>291</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapNodeOfDataMapOfOrientedShapeC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>292</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapNodeOfDataMapOfShapeface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>293</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapNodeOfDataMapOfShapeListOfC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>294</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapOfOrientedShapeC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>295</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapOfShapeface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>296</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_DataMapOfShapeListOfC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>297</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfShapeBox2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>298</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfShapeBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>299</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfShapeconnexity_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>300</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapNodeOfIndexedDataMapOfSolidClassifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>301</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfShapeBox2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>302</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfShapeBox_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>303</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfShapeconnexity_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>304</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_IndexedDataMapOfSolidClassifier_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>305</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_ListIteratorOfListOfC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>306</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_ListNodeOfListOfC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>307</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRepTool\TopOpeBRepTool_ListOfC2DF_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>308</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_Array1OfLineInter_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_Array1OfVPointInter_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_DataMapIteratorOfDataMapOfTopolTool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_DataMapNodeOfDataMapOfTopolTool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_DataMapOfTopolTool_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_HArray1OfLineInter_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_HArray1OfVPointInter_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_ListIteratorOfListOfBipoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_ListNodeOfListOfBipoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_ListOfBipoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_SequenceNodeOfSequenceOfPoint2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\TopOpeBRep\TopOpeBRep_SequenceOfPoint2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>309</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>310</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_AsDes.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>311</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_BooleanOperation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>312</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_BooleanOperations.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>313</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Common.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>314</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Cut.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>315</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_DSAccess.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>316</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_EdgeConnector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>317</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_FaceRestrictor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>318</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Fuse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>319</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Image.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>320</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Loop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>321</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_NormalProjection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>322</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Section.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>323</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_Tool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>324</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepAlgo\BRepAlgo_TopOpe.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>325</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>334</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_ACRLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>335</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_ApproxSeewing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>336</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_CompatibleWires.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>337</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_CurveConstraint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>338</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Draft.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>339</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_DraftLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>340</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Edge3DLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>341</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_EdgeFaceAndOrder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>342</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_EdgeOnSurfLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>343</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Evolved.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>344</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_FaceAndOrder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>345</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Filling.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>346</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Generator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>347</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_LocationLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>348</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_MultiLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>349</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_MultiLineTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>350</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_NSections.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>351</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_OffsetAncestors.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>352</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_OffsetWire.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>353</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Pipe.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>354</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_PipeShell.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>355</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Section.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>356</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_SectionLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>357</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_SectionPlacement.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>358</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_ShapeLaw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>359</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_Sweep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>360</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_TrimEdgeTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>361</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_TrimShellCorner.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>362</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepFill\BRepFill_TrimSurfaceTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>363</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BRepProj\BRepProj_Projection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>393</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Area1dBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Area2dBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Area3dBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_AreaBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BlockBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BlockIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuildEdges.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder1_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Builder1_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuilderON.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuilderON2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuildFaces.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_BuildVertices.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_CompositeClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_CorrectFace2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_EdgeBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_End.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FaceAreaBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FaceBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_fctwes.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ffsfs.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ffwesk.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FREGU.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_FuseFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GIter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Grid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Griddump.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GridEE.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GridFF.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GridSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>198</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>199</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_GTopo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>200</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_HBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>201</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_keep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>202</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_KPart.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>203</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_kpkole.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>204</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Loop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>205</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_LoopClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>206</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_LoopSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>207</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_makeedges.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>208</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_makefaces.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>209</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_makesolids.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>210</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Merge.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>211</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_on.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>212</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Pave.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>213</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_PaveClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>214</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_PaveSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>215</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Section.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>216</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShapeListOfShape.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>217</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShapeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>218</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShellFaceClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>219</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShellFaceSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>220</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_ShellToSolid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>221</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_SolidAreaBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>222</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_SolidBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>223</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_SREGU.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>224</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Tools.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>225</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Tools2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>226</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_Tools_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>227</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_trace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>228</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_VertexInfo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>229</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_WireEdgeClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>230</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_WireEdgeSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>231</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepBuild\TopOpeBRepBuild_WireToFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>232</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Association.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_BuildTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Check.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_connex.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurveData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurveExplorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurveIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_CurvePointInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_DataStructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_DRAW.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_DSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Dumper.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Edge3dInterferenceTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EdgeInterferenceTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EdgeVertexInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EIR.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Explorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_EXPORT.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FaceEdgeInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FaceInterferenceTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Filter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FilterCurveInterferences.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FilterEdgeInterferences.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FilterFaceInterferences.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_FIR.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_funk.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_GapFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_GapTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_GeometryData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_HDataStructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Interference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_InterferenceIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_InterferenceTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ListOfShapeOn1State.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Marker.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Point.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_PointData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_PointExplorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_PointIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ProcessEdgeInterferences.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ProcessFaceInterferences.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ProcessInterferencesTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_reDEB.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_redu.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Reducer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_repvg.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_samdom.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ShapeData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ShapeShapeInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_ShapeWithState.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SolidSurfaceInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Surface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceCurveInterference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceData.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceExplorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_SurfaceIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_TKI.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_TOOL.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_trace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_traceDSX.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepDS\TopOpeBRepDS_Transition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>250</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>251</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_AncestorsTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>252</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_box.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>253</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_BoxSort.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>254</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_C2DF.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>255</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_CLASSI.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>256</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_closing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>257</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_connexity.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>258</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_CORRISO.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>259</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_CurveTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>260</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_DRAW.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>261</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_face.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>262</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_faulty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>263</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_FuseEdges.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>264</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_GEOMETRY.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>265</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_GeomTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>266</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_HBoxTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>267</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_makeTransition.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>268</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_matter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>269</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_mkTondgE.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>270</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_PROJECT.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>271</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_PURGE.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>272</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_PurgeInternalEdges.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>273</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_RegularizeS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>274</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_RegularizeW.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>275</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_REGUS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>276</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_REGUW.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>277</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_SC.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>278</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_ShapeClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>279</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_ShapeExplorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>280</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_ShapeTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>281</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_SolidClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>282</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_STATE.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>283</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_tol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>284</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_TOOL.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>285</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_TOPOLOGY.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>286</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_trace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>287</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRepTool\TopOpeBRepTool_traceSTATE.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>288</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_Bipoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_DRAW.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_DSFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_EdgesFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_EdgesIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_EdgesIntersector_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FaceEdgeFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FaceEdgeFiller_DEB.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FaceEdgeIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FacesFiller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FacesFiller_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FacesFiller_VPonR.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FacesIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FFDumper.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_FFTransitionTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_GeomTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_Hctxee2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_Hctxff2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_kpart.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_LineInter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_mergePDS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_Point2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_PointClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_PointGeomTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_ProcessGR.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_ProcessSectionEdges.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_ShapeIntersector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_ShapeIntersector2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_ShapeScanner.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_sort.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_trace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_traceALWL.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_traceBOOPNINT.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_traceSIFF.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_VPointInter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_VPointInterClassifier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_VPointInterIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_vpr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_vprclo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_vprdeg.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_WPointInter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopOpeBRep\TopOpeBRep_WPointInterIterator.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

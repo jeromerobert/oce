@@ -1,0 +1,3091 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\TopoDSToStep\;..\..\..\src\StepToTopoDS\;..\..\..\drv\StepToTopoDS\;..\..\..\drv\STEPConstruct\;..\..\..\src\STEPConstruct\;..\..\..\src\STEPControl\;..\..\..\src\RWStepAP214\;..\..\..\src\RWStepAP203\;..\..\..\src\StepAP209\;..\..\..\drv\StepAP214\;..\..\..\src\StepAP214\;..\..\..\drv\StepAP203\;..\..\..\src\StepAP203\;..\..\..\src\StepToGeom\;..\..\..\src\GeomToStep\;..\..\..\src\STEPEdit\;..\..\..\src\STEPSelections\;..\..\..\drv\STEPSelections\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\TopoDSToStep\;..\..\..\src\StepToTopoDS\;..\..\..\drv\StepToTopoDS\;..\..\..\drv\STEPConstruct\;..\..\..\src\STEPConstruct\;..\..\..\src\STEPControl\;..\..\..\src\RWStepAP214\;..\..\..\src\RWStepAP203\;..\..\..\src\StepAP209\;..\..\..\drv\StepAP214\;..\..\..\src\StepAP214\;..\..\..\drv\StepAP203\;..\..\..\src\StepAP203\;..\..\..\src\StepToGeom\;..\..\..\src\GeomToStep\;..\..\..\src\STEPEdit\;..\..\..\src\STEPSelections\;..\..\..\drv\STEPSelections\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeTrimmedCurve.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateVertexLoop.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_PointVertexMap_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_SelectInstances.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignApprovalAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_UnitContext.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeHyperbola2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfSecurityClassificationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPControl\STEPControl_ActorWrite.cpp'">
+			<IncludePath>..\..\..\drv\STEPControl;$(IncludePath)</IncludePath>
+			<Defines>__STEPControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfClassifiedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignApproval.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakePlane.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignCertification.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_GroupItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_PointHasher.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_Tool.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_Styles.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfPresentedItemSelect_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_ValidationProps.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeSurfaceOfRevolution.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeVectorWithMagnitude.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_Tool.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignNominalDateAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignActualDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignDateAndTimeItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfExternalIdentificationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_ApprovedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_PointEdgeMap_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignGeneralOrgItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignDateAndPersonAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeAxis1Placement.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeConicalSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfPointEdgeMap_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_SelectFaces.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeToroidalSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeConic2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP209\StepAP209_Construct.cpp'">
+			<IncludePath>..\..\..\drv\StepAP209;$(IncludePath)</IncludePath>
+			<Defines>__StepAP209_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedDateAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignGeneralOrgItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_Root.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignDateAndTimeItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignCertification.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeDirection.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeParabola.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeSphericalSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignGroupAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignSecurityClassificationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignSecurityClassification.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeBoundedSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_ApprovalItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_DocumentReferenceItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignSpecificationReference.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfGroupItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_AP203Context.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_PresentedItemSelect.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignPresentedItemSelect.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignGroupedItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfWorkItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPControl\STEPControl_ActorRead.cpp'">
+			<IncludePath>..\..\..\drv\STEPControl;$(IncludePath)</IncludePath>
+			<Defines>__STEPControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfPersonAndOrganizationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeBSplineSurfaceWithKnotsAndRationalBSplineSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeParabola2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_AssemblyLink.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignApprovalAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPSelections\STEPSelections_SequenceOfAssemblyLink_0.cpp'">
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignActualDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_StartRequestItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPEdit\STEPEdit.cpp'">
+			<IncludePath>..\..\..\drv\STEPEdit;$(IncludePath)</IncludePath>
+			<Defines>__STEPEdit_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeElementarySurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_FacetedTool.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeLine2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfDateItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPEdit\STEPEdit_EditSDR.cpp'">
+			<IncludePath>..\..\..\drv\STEPEdit;$(IncludePath)</IncludePath>
+			<Defines>__STEPEdit_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignPresentedItem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_OrganizationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfDataMapOfRINames_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_DateTimeItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeLine.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_SelectAssembly.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPSelections\STEPSelections_SequenceNodeOfSequenceOfAssemblyComponent_0.cpp'">
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakePlane.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateEdge.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignPresentedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCurve2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeBSplineCurveWithKnots.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignContract.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPControl\STEPControl_Writer.cpp'">
+			<IncludePath>..\..\..\drv\STEPControl;$(IncludePath)</IncludePath>
+			<Defines>__STEPControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfStartRequestItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeBSplineCurve.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeDirection2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_ExternallyDefinedClass.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedApprovalAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfDateTimeItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepWire.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignDateAndPersonItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfDateItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfApprovedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfContractedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPEdit\STEPEdit_EditContext.cpp'">
+			<IncludePath>..\..\..\drv\STEPEdit;$(IncludePath)</IncludePath>
+			<Defines>__STEPEdit_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignDateAndPersonAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfWorkItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeElementarySurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPSelections\STEPSelections_SequenceOfAssemblyComponent_0.cpp'">
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateEdgeLoop.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepFace.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPConstruct\STEPConstruct_DataMapNodeOfDataMapOfPointTransient_0.cpp'">
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPSelections\STEPSelections_HSequenceOfAssemblyLink_0.cpp'">
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignReferencingItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeTransformation2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_Builder.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_Builder.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepVertex.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCircle2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_ExternallyDefinedGeneralProperty.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignGroupedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeAxisPlacement.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWChange.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_ExternRefs.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeBSplineCurve2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_Class.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignDocumentReference.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignPresentedItemSelect_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeSphericalSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignDatedItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeToroidalSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfPresentedItemSelect_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignDatedItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeTrimmedCurve2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedGroupAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfDataMapOfRI_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepEdge.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_AssemblyExplorer.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeBSplineSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeCartesianPoint.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedApprovalAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignSecurityClassificationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedExternalIdentificationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedDateAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignApproval.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeBoundedSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakePolyline2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeSweptSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeTransformation3d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateShell.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfDataMapOfTRI_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeEllipse2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfApprovalItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignPersonAndOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedDocumentReference.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWClass.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedDocumentReference.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_PointPairHasher.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignDateAndTimeItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapOfRINames_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPConstruct\STEPConstruct_DataMapNodeOfDataMapOfAsciiStringTransient_0.cpp'">
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_Counter.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeConicalSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_ChangeRequest.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_ContextTool.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignActualDateAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeConic.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_DateItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeCylindricalSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfDataMapOfTRI_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeFacetedBrep.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfPersonOrganizationItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedPersonAndOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfDateTimeItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfClassifiedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfPointEdgeMap_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPConstruct\STEPConstruct_DataMapIteratorOfDataMapOfPointTransient_0.cpp'">
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateCompositeCurve.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_Root.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfSpecifiedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWStartWork.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_Tool.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfDateAndTimeItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeBSplineSurfaceWithKnots.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_ReadWriteModule.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfSpecifiedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignPresentedItemSelect_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPConstruct\STEPConstruct_DataMapOfAsciiStringTransient_0.cpp'">
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignReferencingItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignReferencingItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignNominalDateAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeBoundedCurve2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignPersonAndOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_PersonAndOrganizationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPConstruct\STEPConstruct_DataMapOfPointTransient_0.cpp'">
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_GeometricTool.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignDateAndPersonItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeVector.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPSelections\STEPSelections_SequenceNodeOfSequenceOfAssemblyLink_0.cpp'">
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfChangeRequestItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeHyperbola.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfStartRequestItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedPresentedItem.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakePolyline.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeSurfaceOfLinearExtrusion.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_DateAndTimeItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapOfRI_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignNominalDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfPointVertexMap_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakePolyline.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_Root.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfPersonOrganizationItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslatePolyLoop.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_ExternalIdentificationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeShellBasedSurfaceModel.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedSecurityClassificationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeAxis1Placement.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeEllipse.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_ChangeRequestItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateCurveBoundedSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCurve.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfApprovedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_StartWork.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeParabola.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfDataMapOfRINames_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfDocumentReferenceItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeBoundedCurve.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfDocumentReferenceItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCylindricalSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapOfTRI_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignOrganizationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_ContractedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfCertifiedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_ClassifiedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfCertifiedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeBoundedCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeManifoldSolidBrep.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeEllipse.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWExternallyDefinedGeneralProperty.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWRepItemGroup.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfDateAndTimeItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeLine.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedPersonAndOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_HArray1OfContractedItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeDirection.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignSpecificationReference.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CertifiedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_NMTool.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedExternalIdentificationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_PersonOrganizationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPControl\STEPControl_Reader.cpp'">
+			<IncludePath>..\..\..\drv\STEPControl;$(IncludePath)</IncludePath>
+			<Defines>__STEPControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWExternallyDefinedClass.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeAxis2Placement2d.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_SecurityClassificationItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeSweptSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_CartesianPointHasher.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_WireframeBuilder.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfPersonAndOrganizationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeBSplineCurveWithKnotsAndRationalBSplineCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateVertex.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfExternalIdentificationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_Root.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCartesianPoint2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateFace.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfGroupItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignGroupAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeConic.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignDateAndPersonItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignSecurityClassification.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignDatedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfOrganizationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_Assembly.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPControl\STEPControl_Controller.cpp'">
+			<IncludePath>..\..\..\drv\STEPControl;$(IncludePath)</IncludePath>
+			<Defines>__STEPControl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_AssemblyComponent.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWChangeRequest.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCircle.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_SpecifiedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_PointPair.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignGeneralOrgItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_Protocol.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWStartRequest.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeBrepWithVoids.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeAxis2Placement3d.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_RepItemGroup.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_GeneralModule.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeRectangularTrimmedSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeSurfaceOfRevolution.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeSurfaceOfLinearExtrusion.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_WorkItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeFacetedBrepAndBrepWithVoids.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_SelectGSCurves.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedPresentedItem.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeRectangularTrimmedSurface.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP203\StepAP203_Array1OfChangeRequestItem_0.cpp'">
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeCircle.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AutoDesignDocumentReference.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignPersonAndOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfApprovalItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_Change.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_SelectDerived.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_CcDesignContract.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeVectorWithMagnitude2d.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_Array1OfSecurityClassificationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPSelections\STEPSelections_SelectForTransfer.cpp'">
+			<IncludePath>..\..\..\drv\STEPSelections;$(IncludePath)</IncludePath>
+			<Defines>__STEPSelections_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignGroupedItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToTopoDS\StepToTopoDS_MakeTransformed.cpp'">
+			<IncludePath>..\..\..\drv\StepToTopoDS;$(IncludePath)</IncludePath>
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\STEPConstruct\STEPConstruct_DataMapIteratorOfDataMapOfAsciiStringTransient_0.cpp'">
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP214\StepAP214_AppliedGroupAssignment.cpp'">
+			<IncludePath>..\..\..\drv\StepAP214;$(IncludePath)</IncludePath>
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\TopoDSToStep\TopoDSToStep_MakeGeometricCurveSet.cpp'">
+			<IncludePath>..\..\..\drv\TopoDSToStep;$(IncludePath)</IncludePath>
+			<Defines>__TopoDSToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfDataMapOfRI_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepAP214\StepAP214_HArray1OfOrganizationItem_0.cpp'">
+			<Defines>__StepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfPointVertexMap_0.cpp'">
+			<Defines>__StepToTopoDS_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedSecurityClassificationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignActualDateAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepAP203\StepAP203_StartRequest.cpp'">
+			<IncludePath>..\..\..\drv\StepAP203;$(IncludePath)</IncludePath>
+			<Defines>__StepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeAxis2Placement.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\STEPConstruct\STEPConstruct_Part.cpp'">
+			<IncludePath>..\..\..\drv\STEPConstruct;$(IncludePath)</IncludePath>
+			<Defines>__STEPConstruct_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignNominalDateAndTimeAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP214;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP214_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignPersonAndOrganizationAssignment.cpp'">
+			<IncludePath>..\..\..\drv\RWStepAP203;$(IncludePath)</IncludePath>
+			<Defines>__RWStepAP203_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomToStep\GeomToStep_MakeHyperbola.cpp'">
+			<IncludePath>..\..\..\drv\GeomToStep;$(IncludePath)</IncludePath>
+			<Defines>__GeomToStep_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\StepToGeom\StepToGeom_MakeCartesianPoint.cpp'">
+			<IncludePath>..\..\..\drv\StepToGeom;$(IncludePath)</IncludePath>
+			<Defines>__StepToGeom_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKBRep.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>332</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>344</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG2d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>333</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>334</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>335</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKGeomBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>336</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>337</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKShHealing.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>341</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKSTEP209.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>338</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKSTEPAttr.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>339</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKSTEPBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>340</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKTopAlgo.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>342</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKXSBase.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>343</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfApprovedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfCertifiedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfChangeRequestItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfClassifiedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfContractedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfDateTimeItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfPersonOrganizationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfSpecifiedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfStartRequestItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_Array1OfWorkItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfApprovedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfCertifiedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfChangeRequestItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfClassifiedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfContractedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfDateTimeItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfPersonOrganizationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfSpecifiedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfStartRequestItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP203\StepAP203_HArray1OfWorkItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfApprovalItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignDateAndPersonItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignDateAndTimeItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignDatedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignGeneralOrgItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignGroupedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignPresentedItemSelect_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfAutoDesignReferencingItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfDateAndTimeItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfDateItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfDocumentReferenceItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfExternalIdentificationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfGroupItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfOrganizationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfPersonAndOrganizationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfPresentedItemSelect_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_Array1OfSecurityClassificationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfApprovalItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignDateAndPersonItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignDateAndTimeItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignDatedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignGeneralOrgItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignGroupedItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignPresentedItemSelect_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfAutoDesignReferencingItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfDateAndTimeItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfDateItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfDocumentReferenceItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfExternalIdentificationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfGroupItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfOrganizationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfPersonAndOrganizationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfPresentedItemSelect_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepAP214\StepAP214_HArray1OfSecurityClassificationItem_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPConstruct\STEPConstruct_DataMapIteratorOfDataMapOfAsciiStringTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPConstruct\STEPConstruct_DataMapIteratorOfDataMapOfPointTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPConstruct\STEPConstruct_DataMapNodeOfDataMapOfAsciiStringTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPConstruct\STEPConstruct_DataMapNodeOfDataMapOfPointTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPConstruct\STEPConstruct_DataMapOfAsciiStringTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPConstruct\STEPConstruct_DataMapOfPointTransient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPSelections\STEPSelections_HSequenceOfAssemblyLink_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>326</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPSelections\STEPSelections_SequenceNodeOfSequenceOfAssemblyComponent_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>327</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPSelections\STEPSelections_SequenceNodeOfSequenceOfAssemblyLink_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>328</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPSelections\STEPSelections_SequenceOfAssemblyComponent_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>329</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\STEPSelections\STEPSelections_SequenceOfAssemblyLink_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>330</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfDataMapOfRINames_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>280</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfDataMapOfRI_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>281</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfDataMapOfTRI_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>282</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfPointEdgeMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>283</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapIteratorOfPointVertexMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>284</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfDataMapOfRINames_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>285</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfDataMapOfRI_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>286</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfDataMapOfTRI_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>287</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfPointEdgeMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>288</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapNodeOfPointVertexMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>289</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapOfRINames_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>290</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapOfRI_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>291</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_DataMapOfTRI_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>292</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_PointEdgeMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>293</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\StepToTopoDS\StepToTopoDS_PointVertexMap_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>294</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeAxis1Placement.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeAxis2Placement2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeAxis2Placement3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeBoundedCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeBoundedSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeBSplineCurveWithKnots.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeBSplineCurveWithKnotsAndRationalBSplineCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeBSplineSurfaceWithKnots.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeBSplineSurfaceWithKnotsAndRationalBSplineSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeCartesianPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeCircle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeConic.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeConicalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeCylindricalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeDirection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeElementarySurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>198</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeEllipse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>199</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeHyperbola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>200</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>201</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeParabola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>202</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakePlane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>203</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakePolyline.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>204</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeRectangularTrimmedSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>205</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeSphericalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>206</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>207</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeSurfaceOfLinearExtrusion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>208</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeSurfaceOfRevolution.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>209</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeSweptSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>210</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeToroidalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>211</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_MakeVector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>212</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomToStep\GeomToStep_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>213</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignApproval.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignCertification.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignContract.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignPersonAndOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignSecurityClassification.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWCcDesignSpecificationReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWChange.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWChangeRequest.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWStartRequest.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP203\RWStepAP203_RWStartWork.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_GeneralModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_ReadWriteModule.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedApprovalAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedDateAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedDocumentReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedExternalIdentificationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedGroupAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedPersonAndOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedPresentedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAppliedSecurityClassificationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignActualDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignActualDateAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignApprovalAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignDateAndPersonAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignDocumentReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignGroupAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignNominalDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignNominalDateAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignPersonAndOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignPresentedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWAutoDesignSecurityClassificationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWClass.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWExternallyDefinedClass.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWExternallyDefinedGeneralProperty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\RWStepAP214\RWStepAP214_RWRepItemGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_ApprovedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignApproval.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignCertification.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignContract.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignPersonAndOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignSecurityClassification.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CcDesignSpecificationReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_CertifiedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_Change.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_ChangeRequest.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_ChangeRequestItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_ClassifiedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_ContractedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_DateTimeItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_PersonOrganizationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_SpecifiedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_StartRequest.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_StartRequestItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_StartWork.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP203\StepAP203_WorkItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP209\StepAP209_Construct.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>331</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedApprovalAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedDateAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedDocumentReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedExternalIdentificationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedGroupAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedPersonAndOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedPresentedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AppliedSecurityClassificationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_ApprovalItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignActualDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignActualDateAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignApprovalAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignDateAndPersonAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignDateAndPersonItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignDateAndTimeItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignDatedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignDocumentReference.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignGeneralOrgItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignGroupAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignGroupedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignNominalDateAndTimeAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignNominalDateAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignOrganizationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignPersonAndOrganizationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignPresentedItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignPresentedItemSelect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignReferencingItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_AutoDesignSecurityClassificationAssignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_Class.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_DateAndTimeItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_DateItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_DocumentReferenceItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_ExternalIdentificationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_ExternallyDefinedClass.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_ExternallyDefinedGeneralProperty.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_GroupItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_OrganizationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_PersonAndOrganizationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_PresentedItemSelect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_Protocol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_RepItemGroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepAP214\StepAP214_SecurityClassificationItem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_AP203Context.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_Assembly.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_ContextTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_ExternRefs.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_Part.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_PointHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_Styles.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_Tool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_UnitContext.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPConstruct\STEPConstruct_ValidationProps.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPControl\STEPControl_ActorRead.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>311</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPControl\STEPControl_ActorWrite.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>312</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPControl\STEPControl_Controller.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>313</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPControl\STEPControl_Reader.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>314</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPControl\STEPControl_Writer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>315</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPEdit\STEPEdit.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPEdit\STEPEdit_EditContext.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPEdit\STEPEdit_EditSDR.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_AssemblyComponent.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>316</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_AssemblyExplorer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>317</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_AssemblyLink.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>318</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_Counter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>319</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_SelectAssembly.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>320</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_SelectDerived.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>321</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_SelectFaces.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>322</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_SelectForTransfer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>323</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_SelectGSCurves.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>324</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\STEPSelections\STEPSelections_SelectInstances.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>325</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeAxis1Placement.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>214</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeAxis2Placement.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>215</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeAxisPlacement.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>216</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeBoundedCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>217</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeBoundedCurve2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>218</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeBoundedSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>219</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeBSplineCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>220</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeBSplineCurve2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>221</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeBSplineSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>222</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCartesianPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>223</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCartesianPoint2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>224</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCircle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>225</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCircle2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>226</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeConic.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>227</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeConic2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>228</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeConicalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>229</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>230</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCurve2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>231</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeCylindricalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>232</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeDirection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>233</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeDirection2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>234</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeElementarySurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>235</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeEllipse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>236</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeEllipse2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>237</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeHyperbola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>238</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeHyperbola2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>239</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>240</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeLine2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>241</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeParabola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>242</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeParabola2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>243</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakePlane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>244</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakePolyline.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>245</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakePolyline2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>246</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeRectangularTrimmedSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>247</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeSphericalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>248</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>249</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeSurfaceOfLinearExtrusion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>250</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeSurfaceOfRevolution.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>251</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeSweptSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>252</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeToroidalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>253</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeTransformation2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>254</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeTransformation3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>255</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeTrimmedCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>256</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeTrimmedCurve2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>257</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeVectorWithMagnitude.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>258</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_MakeVectorWithMagnitude2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>259</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToGeom\StepToGeom_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>260</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>261</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>262</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_CartesianPointHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>263</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_GeometricTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>264</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_MakeTransformed.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>265</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_NMTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>266</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_PointPair.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>267</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_PointPairHasher.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>268</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>269</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_Tool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>270</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateCompositeCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>271</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateCurveBoundedSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>272</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateEdge.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>273</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateEdgeLoop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>274</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>275</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslatePolyLoop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>276</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateShell.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>277</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateVertex.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>278</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\StepToTopoDS\StepToTopoDS_TranslateVertexLoop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>279</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>295</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_Builder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>296</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_FacetedTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>297</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeBrepWithVoids.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>298</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeFacetedBrep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>299</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeFacetedBrepAndBrepWithVoids.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>300</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeGeometricCurveSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>301</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeManifoldSolidBrep.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>302</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeShellBasedSurfaceModel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>303</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepEdge.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>304</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepFace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>305</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepVertex.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>306</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_MakeStepWire.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>307</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>308</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_Tool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>309</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\TopoDSToStep\TopoDSToStep_WireframeBuilder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>310</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

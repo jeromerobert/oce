@@ -1,0 +1,120 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B3D05287-4F3C-48A7-A14D-5B6BC672D941}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TKDraw.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKTopTest.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKViewerTest.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXSDRAW.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKDCAF.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKXDEDRAW.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="TKTObjDRAW.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="DRAWEXE.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TKDraw">
+			<MSBuild Projects="TKDraw.cbproj"/>
+		</Target>
+		<Target Name="TKDraw:Clean">
+			<MSBuild Projects="TKDraw.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKDraw:Make">
+			<MSBuild Projects="TKDraw.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKTopTest">
+			<MSBuild Projects="TKTopTest.cbproj"/>
+		</Target>
+		<Target Name="TKTopTest:Clean">
+			<MSBuild Projects="TKTopTest.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKTopTest:Make">
+			<MSBuild Projects="TKTopTest.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKViewerTest">
+			<MSBuild Projects="TKViewerTest.cbproj"/>
+		</Target>
+		<Target Name="TKViewerTest:Clean">
+			<MSBuild Projects="TKViewerTest.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKViewerTest:Make">
+			<MSBuild Projects="TKViewerTest.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXSDRAW">
+			<MSBuild Projects="TKXSDRAW.cbproj"/>
+		</Target>
+		<Target Name="TKXSDRAW:Clean">
+			<MSBuild Projects="TKXSDRAW.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXSDRAW:Make">
+			<MSBuild Projects="TKXSDRAW.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKDCAF">
+			<MSBuild Projects="TKDCAF.cbproj"/>
+		</Target>
+		<Target Name="TKDCAF:Clean">
+			<MSBuild Projects="TKDCAF.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKDCAF:Make">
+			<MSBuild Projects="TKDCAF.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKXDEDRAW">
+			<MSBuild Projects="TKXDEDRAW.cbproj"/>
+		</Target>
+		<Target Name="TKXDEDRAW:Clean">
+			<MSBuild Projects="TKXDEDRAW.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKXDEDRAW:Make">
+			<MSBuild Projects="TKXDEDRAW.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="TKTObjDRAW">
+			<MSBuild Projects="TKTObjDRAW.cbproj"/>
+		</Target>
+		<Target Name="TKTObjDRAW:Clean">
+			<MSBuild Projects="TKTObjDRAW.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TKTObjDRAW:Make">
+			<MSBuild Projects="TKTObjDRAW.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="DRAWEXE">
+			<MSBuild Projects="DRAWEXE.cbproj"/>
+		</Target>
+		<Target Name="DRAWEXE:Clean">
+			<MSBuild Projects="DRAWEXE.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="DRAWEXE:Make">
+			<MSBuild Projects="DRAWEXE.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TKDraw;TKTopTest;TKViewerTest;TKXSDRAW;TKDCAF;TKXDEDRAW;TKTObjDRAW;DRAWEXE"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TKDraw:Clean;TKTopTest:Clean;TKViewerTest:Clean;TKXSDRAW:Clean;TKDCAF:Clean;TKXDEDRAW:Clean;TKTObjDRAW:Clean;DRAWEXE:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TKDraw:Make;TKTopTest:Make;TKViewerTest:Make;TKXSDRAW:Make;TKDCAF:Make;TKXDEDRAW:Make;TKTObjDRAW:Make;DRAWEXE:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

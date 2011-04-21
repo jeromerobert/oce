@@ -1,0 +1,3409 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\GCE2d\;..\..\..\src\CPnts\;..\..\..\drv\AppParCurves\;..\..\..\src\AppParCurves\;..\..\..\src\Geom2dConvert\;..\..\..\src\gce\;..\..\..\src\GC\;..\..\..\src\GeomConvert\;..\..\..\src\GeomProjLib\;..\..\..\src\GeomLib\;..\..\..\drv\GeomLib\;..\..\..\drv\Extrema\;..\..\..\src\GeomTools\;..\..\..\src\FEmTool\;..\..\..\src\AppCont\;..\..\..\drv\AppCont\;..\..\..\drv\FEmTool\;..\..\..\drv\ProjLib\;..\..\..\src\ProjLib\;..\..\..\src\Extrema\;..\..\..\drv\AdvApp2Var\;..\..\..\src\AdvApp2Var\;..\..\..\src\BndLib\;..\..\..\src\Hermit\;..\..\..\src\AppDef\;..\..\..\src\IntAna\;..\..\..\drv\IntAna\;..\..\..\src\IntAna2d\;..\..\..\drv\AppDef\;..\..\..\drv\Approx\;..\..\..\src\GCPnts\;..\..\..\src\Approx\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\GCE2d\;..\..\..\src\CPnts\;..\..\..\drv\AppParCurves\;..\..\..\src\AppParCurves\;..\..\..\src\Geom2dConvert\;..\..\..\src\gce\;..\..\..\src\GC\;..\..\..\src\GeomConvert\;..\..\..\src\GeomProjLib\;..\..\..\src\GeomLib\;..\..\..\drv\GeomLib\;..\..\..\drv\Extrema\;..\..\..\src\GeomTools\;..\..\..\src\FEmTool\;..\..\..\src\AppCont\;..\..\..\drv\AppCont\;..\..\..\drv\FEmTool\;..\..\..\drv\ProjLib\;..\..\..\src\ProjLib\;..\..\..\src\Extrema\;..\..\..\drv\AdvApp2Var\;..\..\..\src\AdvApp2Var\;..\..\..\src\BndLib\;..\..\..\src\Hermit\;..\..\..\src\AppDef\;..\..\..\src\IntAna\;..\..\..\drv\IntAna\;..\..\..\src\IntAna2d\;..\..\..\drv\AppDef\;..\..\..\drv\Approx\;..\..\..\src\GCPnts\;..\..\..\src\Approx\;..\..\..\inc;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_MathBase.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_ProjectedCurve.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_SequenceOfMultiCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_ComputeApproxOnPolarSurface.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ProjLib\ProjLib_SequenceOfHSequenceOfPnt_0.cpp'">
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_Array1OfAdHSurface_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_LinearJerk.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_FuncExtPS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_Array2OfPOnSurf_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCFOfELCCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceOfStrip_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_LogSample.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_FunctionTool.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtPRevS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ResConstraintOfMyGradientbisOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ResConstraintOfTheGradient_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeHyperbola.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_ProjectOnSurface.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeTrimmedCylinder.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_GenExtPS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ECC2dOfExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeArcOfEllipse.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_Projector.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_IntQuadQuad.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_QuadQuadGeo.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppParCurves\AppParCurves_MultiPoint.cpp'">
+			<IncludePath>..\..\..\drv\AppParCurves;$(IncludePath)</IncludePath>
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtPElC2d.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_Array2OfPOnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_PCFOfEPCOfELPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntAna\IntAna_ListOfCurve_0.cpp'">
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_2.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_Interpolate.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppParCurves\AppParCurves_MultiCurve.cpp'">
+			<IncludePath>..\..\..\drv\AppParCurves;$(IncludePath)</IncludePath>
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfSequenceOfStrip_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppParCurves\AppParCurves.cpp'">
+			<IncludePath>..\..\..\drv\AppParCurves;$(IncludePath)</IncludePath>
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_PrjFunc.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_ElementaryCriterion.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfELPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_AssemblyTable_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_1.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BndLib\BndLib_Compute3d.cpp'">
+			<IncludePath>..\..\..\drv\BndLib;$(IncludePath)</IncludePath>
+			<Defines>__BndLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeArcOfParabola.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfELPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ProjLib\ProjLib_SequenceNodeOfSequenceOfHSequenceOfPnt_0.cpp'">
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCLocFOfLocECC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfELCC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ELCCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_HArray1OfPOnSurf_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_SequenceNodeOfSeqOfLinConstr_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_ApproxF2var.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppParCurves\AppParCurves_ConstraintCouple.cpp'">
+			<IncludePath>..\..\..\drv\AppParCurves;$(IncludePath)</IncludePath>
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_1.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_HArray2OfPOnSurf_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ParLeastSquareOfMyGradientOfCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_TheLeastSquares_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeParabola.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeMirror2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfECC2dOfExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeRotation2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_CurvlinFunc.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeCirc.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppParCurves\AppParCurves_MultiBSpCurve.cpp'">
+			<IncludePath>..\..\..\drv\AppParCurves;$(IncludePath)</IncludePath>
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfSequenceOfNode_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_0.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeElips.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPCOfPCLocFOfLocEPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCache2dOfExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ELPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_Compute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_PolyFunc.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeDir.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_CurveTool.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_BSplineCurveToBezierCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeTrimmedCone.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ProjLib\ProjLib_HCompProjectedCurve_0.cpp'">
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ProjLib\ProjLib_HProjectedCurve_0.cpp'">
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppDef\AppDef_MultiLine.cpp'">
+			<IncludePath>..\..\..\drv\AppDef;$(IncludePath)</IncludePath>
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeCone.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_IntConicQuad.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_Array1OfGTrsf2d_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_HArray1OfConstraintCouple_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomProjLib\GeomProjLib.cpp'">
+			<IncludePath>..\..\..\drv\GeomProjLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocEPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_Cone.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCPnts\GCPnts_QuasiUniformAbscissa.cpp'">
+			<IncludePath>..\..\..\drv\GCPnts;$(IncludePath)</IncludePath>
+			<Defines>__GCPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_2.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfECCOfExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_Array1OfMultiPoint_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_Sphere.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCPnts\GCPnts_TangentialDeflection.cpp'">
+			<IncludePath>..\..\..\drv\GCPnts;$(IncludePath)</IncludePath>
+			<Defines>__GCPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_Plane.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_CurvilinearParameter.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_SysBase.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomTools\GeomTools_Curve2dSet.cpp'">
+			<IncludePath>..\..\..\drv\GeomTools;$(IncludePath)</IncludePath>
+			<Defines>__GeomTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_PrjResolve.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_Cylinder.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ParFunctionOfTheGradient_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeArcOfParabola.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeCircle.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeConicalSurface.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeRotation.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeHypr.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeTranslation2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppDef\AppDef_MyLineTool.cpp'">
+			<IncludePath>..\..\..\drv\AppDef;$(IncludePath)</IncludePath>
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_BSpGradient_BFGSOfMyBSplGradientOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeLine.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_BSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeElips2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeRotation.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCLocFOfLocEPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_FitAndDivide2d_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_Curve3d.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_SequenceOfMultiBSpCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_GenLocateExtPS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_Array1OfPOnSurf_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_Array2OfPOnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCLocFOfLocECC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_CompProjectedCurve.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_SequenceOfHArray1OfReal_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_BSplineSurfaceToBezierSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeHyperbola.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomTools\GeomTools_UndefinedTypeHandler.cpp'">
+			<IncludePath>..\..\..\drv\GeomTools;$(IncludePath)</IncludePath>
+			<Defines>__GeomTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeTranslation.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_Curve.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_EPCOfELPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LCCacheOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_BSplineSurfaceKnotSplitting.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_ListOfVectors_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_GenExtCS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_BSpParLeastSquareOfMyBSplGradientOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_ContMatrices_3.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ResConstraintOfMyGradientOfCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_SweepFunction.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_EPCOfExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceOfNode_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppDef\AppDef_MultiPointConstraint.cpp'">
+			<IncludePath>..\..\..\drv\AppDef;$(IncludePath)</IncludePath>
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_7.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomTools\GeomTools_CurveSet.cpp'">
+			<IncludePath>..\..\..\drv\GeomTools;$(IncludePath)</IncludePath>
+			<Defines>__GeomTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeArcOfCircle.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceOfPatch_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeTranslation.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_Quadric.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_Curve2d.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocECC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppParCurves\AppParCurves_SmoothCriterion.cpp'">
+			<IncludePath>..\..\..\drv\AppParCurves;$(IncludePath)</IncludePath>
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CPnts\CPnts_UniformDeflection.cpp'">
+			<IncludePath>..\..\..\drv\CPnts;$(IncludePath)</IncludePath>
+			<Defines>__CPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfSequenceOfPatch_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfELCC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeRotation.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_POnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_HArray1OfGTrsf2d_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_HArray2OfPOnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_CompCurveToBSplineCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCLocFOfLocECC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_Int3Pln.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_ElementsOfRefMatrix.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_FuncExtSS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ParFunctionOfMyGradientbisOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_HAssemblyTable_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_Root.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_ListIteratorOfListOfVectors_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeLin2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_ListNodeOfListOfVectors_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_ContMatrices.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BndLib\BndLib_AddSurface.cpp'">
+			<IncludePath>..\..\..\drv\BndLib;$(IncludePath)</IncludePath>
+			<Defines>__BndLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_Curve2dTool.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ELCC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_Gradient_BFGSOfMyGradientOfCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeArcOfEllipse.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Iso.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Patch.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_HArray1OfPOnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_3.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Geom2dConvert\Geom2dConvert_CompCurveToBSplineCurve.cpp'">
+			<IncludePath>..\..\..\drv\Geom2dConvert;$(IncludePath)</IncludePath>
+			<Defines>__Geom2dConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_8.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfELCCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeArcOfCircle.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_Array1OfPOnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_CheckBSplineCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_Array1OfMultiCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_5.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Hermit\Hermit.cpp'">
+			<IncludePath>..\..\..\drv\Hermit;$(IncludePath)</IncludePath>
+			<Defines>__Hermit_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeMirror.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeScale.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_SequenceNodeOfSequenceOfMultiBSpCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_Torus.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtSS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_PCFOfEPCOfExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_ContMatrices_4.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_3.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeCirc2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeScale2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_HArray1OfMultiPoint_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_TheFunction_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_ProfileMatrix.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSequenceOfPOnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Context.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_FitAndDivide_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\ProjLib\ProjLib_HSequenceOfHSequenceOfPnt_0.cpp'">
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\FEmTool\FEmTool_SeqOfLinConstr_0.cpp'">
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_HArray1OfMultiCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_HArray1OfMultiPointConstraint_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCFOfECC2dOfExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfELPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_ApproxSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeScale.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_Array1OfConstraintCouple_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_MyLeastSquareOfFitAndDivide2d_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_Tool.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BndLib\BndLib.cpp'">
+			<IncludePath>..\..\..\drv\BndLib;$(IncludePath)</IncludePath>
+			<Defines>__BndLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CPnts\CPnts_AbscissaPoint.cpp'">
+			<IncludePath>..\..\..\drv\CPnts;$(IncludePath)</IncludePath>
+			<Defines>__CPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_SequenceNodeOfSequenceOfHArray1OfReal_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_ApproxAFunc2Var.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_HArray1OfMultiBSpCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ECCOfExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSequenceOfPOnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_MyBSplGradientOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_CurveOnSurface.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCLocFOfLocECCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeArcOfHyperbola.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_Assembly.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPCOfPCLocFOfLocEPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CPnts\CPnts_MyRootFunction.cpp'">
+			<IncludePath>..\..\..\drv\CPnts;$(IncludePath)</IncludePath>
+			<Defines>__CPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCLocFOfLocEPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_EPCOfELPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_DenominatorMultiplier.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeMirror.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeCylinder.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeTranslation.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtPExtS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_Array1OfMultiBSpCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtPS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_ApproxCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BndLib\BndLib_Add2dCurve.cpp'">
+			<IncludePath>..\..\..\drv\BndLib;$(IncludePath)</IncludePath>
+			<Defines>__BndLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_ProjectOnPlane.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_LinearTension.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Criterion.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_Gradient_BFGSOfMyGradientbisOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_1.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_MyCriterionOfTheVariational_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocECCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_Check2dBSplineCurve.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Network.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeHypr2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_MyGradientOfCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceOfPOnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_SameParameter.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_Outils.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ParLeastSquareOfTheGradient_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ELPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_Function.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtPElS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtElC.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfELCCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_TheResol_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakePln.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_PCFOfEPCOfELPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtCS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppCont\AppCont_FitFunction2d_0.cpp'">
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_Conic.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_4.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_GenExtSS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ParLeastSquareOfMyGradientbisOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_Gradient_BFGSOfTheGradient_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_GenLocateExtSS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_Array1OfPOnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_HArray2OfPOnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakePlane.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_Function2d.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomTools\GeomTools_SurfaceSet.cpp'">
+			<IncludePath>..\..\..\drv\GeomTools;$(IncludePath)</IncludePath>
+			<Defines>__GeomTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_Array1OfMultiPointConstraint_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfECCOfExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_TheGradient_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_EPCOfExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Node.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_MathBase_mathinit.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BndLib\BndLib_Compute2d.cpp'">
+			<IncludePath>..\..\..\drv\BndLib;$(IncludePath)</IncludePath>
+			<Defines>__BndLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Geom2dConvert\Geom2dConvert.cpp'">
+			<IncludePath>..\..\..\drv\Geom2dConvert;$(IncludePath)</IncludePath>
+			<Defines>__Geom2dConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\BndLib\BndLib_Add3dCurve.cpp'">
+			<IncludePath>..\..\..\drv\BndLib;$(IncludePath)</IncludePath>
+			<Defines>__BndLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_Root.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_MakeCurvefromApprox.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeEllipse.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_ExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\CPnts\CPnts_MyGaussFunction.cpp'">
+			<IncludePath>..\..\..\drv\CPnts;$(IncludePath)</IncludePath>
+			<Defines>__CPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_ContMatrices_1.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_CompBezierSurfacesToBSplineSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntAna\IntAna_ListNodeOfListOfCurve_0.cpp'">
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_ContMatrices_2.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeMirror.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_HArray1OfAdHSurface_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_POnCurv2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_Curve.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeLin.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfELPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomConvert\GeomConvert_BSplineCurveKnotSplitting.cpp'">
+			<IncludePath>..\..\..\drv\GeomConvert;$(IncludePath)</IncludePath>
+			<Defines>__GeomConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtElSS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCLocFOfLocECCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCacheOfExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCLocFOfLocECCOfLocateExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_SparseMatrix.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_PCFOfEPCOfExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\IntAna\IntAna_ListIteratorOfListOfCurve_0.cpp'">
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_7.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfStrip_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_IntPoint.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AppCont\AppCont_FunctionTool2d.cpp'">
+			<IncludePath>..\..\..\drv\AppCont;$(IncludePath)</IncludePath>
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_MCurvesToBSpCurve.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_BSpParFunctionOfMyBSplGradientOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_POnSurf.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeArcOfHyperbola.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCPnts\GCPnts_AbscissaPoint.cpp'">
+			<IncludePath>..\..\..\drv\GCPnts;$(IncludePath)</IncludePath>
+			<Defines>__GCPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCFOfELCC2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeSegment.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSequenceOfPOnSurf_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_6.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Framework.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_FuncExtCS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCPnts\GCPnts_UniformAbscissa.cpp'">
+			<IncludePath>..\..\..\drv\GCPnts;$(IncludePath)</IncludePath>
+			<Defines>__GCPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_TheVariational_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Approx\Approx_SweepApproximation.cpp'">
+			<IncludePath>..\..\..\drv\Approx;$(IncludePath)</IncludePath>
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomLib\GeomLib_IsPlanarSurface.cpp'">
+			<IncludePath>..\..\..\drv\GeomLib;$(IncludePath)</IncludePath>
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeDir2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCPnts\GCPnts_UniformDeflection.cpp'">
+			<IncludePath>..\..\..\drv\GCPnts;$(IncludePath)</IncludePath>
+			<Defines>__GCPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtElCS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_5.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Geom2dConvert\Geom2dConvert_BSplineCurveKnotSplitting.cpp'">
+			<IncludePath>..\..\..\drv\Geom2dConvert;$(IncludePath)</IncludePath>
+			<Defines>__Geom2dConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_ParFunctionOfMyGradientOfCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeSegment.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppParCurves\AppParCurves_SequenceNodeOfSequenceOfMultiCurve_0.cpp'">
+			<Defines>__AppParCurves_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\ProjLib\ProjLib_ComputeApprox.cpp'">
+			<IncludePath>..\..\..\drv\ProjLib;$(IncludePath)</IncludePath>
+			<Defines>__ProjLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Geom2dConvert\Geom2dConvert_ApproxCurve.cpp'">
+			<IncludePath>..\..\..\drv\Geom2dConvert;$(IncludePath)</IncludePath>
+			<Defines>__Geom2dConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCPnts\GCPnts_QuasiUniformDeflection.cpp'">
+			<IncludePath>..\..\..\drv\GCPnts;$(IncludePath)</IncludePath>
+			<Defines>__GCPnts_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppDef\AppDef_MyGradientbisOfBSplineCompute_0.cpp'">
+			<Defines>__AppDef_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeParab2d.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna\IntAna_IntLinTorus.cpp'">
+			<IncludePath>..\..\..\drv\IntAna;$(IncludePath)</IncludePath>
+			<Defines>__IntAna_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GeomTools\GeomTools.cpp'">
+			<IncludePath>..\..\..\drv\GeomTools;$(IncludePath)</IncludePath>
+			<Defines>__GeomTools_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_GenLocateExtCS.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_HArray1OfPOnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtPElC.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Extrema\Extrema_ExtElC2d.cpp'">
+			<IncludePath>..\..\..\drv\Extrema;$(IncludePath)</IncludePath>
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\Geom2dConvert\Geom2dConvert_BSplineCurveToBezierCurve.cpp'">
+			<IncludePath>..\..\..\drv\Geom2dConvert;$(IncludePath)</IncludePath>
+			<Defines>__Geom2dConvert_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeParab.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfECC2dOfExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_CCFOfECCOfExtCC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_PCLocFOfLocEPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_Root.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LCCache2dOfLocateExtCC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_Data_6.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\gce\gce_MakeScale.cpp'">
+			<IncludePath>..\..\..\drv\gce;$(IncludePath)</IncludePath>
+			<Defines>__gce_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\GeomLib\GeomLib_Array1OfMat_0.cpp'">
+			<Defines>__GeomLib_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AppCont\AppCont_FitFunction_0.cpp'">
+			<Defines>__AppCont_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceOfPOnSurf_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\AdvApp2Var\AdvApp2Var_Strip_0.cpp'">
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_PCLocFOfLocEPCOfLocateExtPC_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\FEmTool\FEmTool_LinearFlexion.cpp'">
+			<IncludePath>..\..\..\drv\FEmTool;$(IncludePath)</IncludePath>
+			<Defines>__FEmTool_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\AdvApp2Var\AdvApp2Var_SysBase_baseinit.cpp'">
+			<IncludePath>..\..\..\drv\AdvApp2Var;$(IncludePath)</IncludePath>
+			<Defines>__AdvApp2Var_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_SequenceOfPOnCurv_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeEllipse.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Extrema\Extrema_LocEPCOfLocateExtPC2d_0.cpp'">
+			<Defines>__Extrema_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GC\GC_MakeCylindricalSurface.cpp'">
+			<IncludePath>..\..\..\drv\GC;$(IncludePath)</IncludePath>
+			<Defines>__GC_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeCircle.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_4.cpp'">
+			<IncludePath>..\..\..\drv\IntAna2d;$(IncludePath)</IncludePath>
+			<Defines>__IntAna2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\GCE2d\GCE2d_MakeLine.cpp'">
+			<IncludePath>..\..\..\drv\GCE2d;$(IncludePath)</IncludePath>
+			<Defines>__GCE2d_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\Approx\Approx_MyLeastSquareOfFitAndDivide_0.cpp'">
+			<Defines>__Approx_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>383</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG2d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>380</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKG3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>381</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKMath.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>382</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfSequenceOfNode_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>255</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfSequenceOfPatch_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>256</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfSequenceOfStrip_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>257</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceNodeOfStrip_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>258</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceOfNode_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>259</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceOfPatch_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>260</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_SequenceOfStrip_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>261</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AdvApp2Var\AdvApp2Var_Strip_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>262</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppCont\AppCont_FitFunction2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppCont\AppCont_FitFunction_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_Array1OfMultiPointConstraint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>289</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_BSpGradient_BFGSOfMyBSplGradientOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>290</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_BSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>291</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_BSpParFunctionOfMyBSplGradientOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>292</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_BSpParLeastSquareOfMyBSplGradientOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>293</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_Compute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>294</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_Gradient_BFGSOfMyGradientbisOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>295</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_Gradient_BFGSOfMyGradientOfCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>296</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_Gradient_BFGSOfTheGradient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>297</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_HArray1OfMultiPointConstraint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>298</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_MyBSplGradientOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>299</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_MyCriterionOfTheVariational_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>300</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_MyGradientbisOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>301</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_MyGradientOfCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>302</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ParFunctionOfMyGradientbisOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>303</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ParFunctionOfMyGradientOfCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>304</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ParFunctionOfTheGradient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>305</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ParLeastSquareOfMyGradientbisOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>306</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ParLeastSquareOfMyGradientOfCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>307</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ParLeastSquareOfTheGradient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>308</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ResConstraintOfMyGradientbisOfBSplineCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>309</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ResConstraintOfMyGradientOfCompute_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>310</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_ResConstraintOfTheGradient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>311</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_TheFunction_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>312</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_TheGradient_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>313</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_TheLeastSquares_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>314</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_TheResol_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>315</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppDef\AppDef_TheVariational_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>316</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_Array1OfConstraintCouple_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_Array1OfMultiBSpCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_Array1OfMultiCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_Array1OfMultiPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_HArray1OfConstraintCouple_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_HArray1OfMultiBSpCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_HArray1OfMultiCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_HArray1OfMultiPoint_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_SequenceNodeOfSequenceOfMultiBSpCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_SequenceNodeOfSequenceOfMultiCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_SequenceOfMultiBSpCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\AppParCurves\AppParCurves_SequenceOfMultiCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_Array1OfAdHSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_Array1OfGTrsf2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_FitAndDivide2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_FitAndDivide_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_HArray1OfAdHSurface_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_HArray1OfGTrsf2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_MyLeastSquareOfFitAndDivide2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_MyLeastSquareOfFitAndDivide_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_SequenceNodeOfSequenceOfHArray1OfReal_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Approx\Approx_SequenceOfHArray1OfReal_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_Array1OfPOnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_Array1OfPOnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_Array1OfPOnSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_Array2OfPOnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_Array2OfPOnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_Array2OfPOnSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCache2dOfExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCacheOfExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCFOfECC2dOfExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCFOfECCOfExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCFOfELCC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCFOfELCCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCLocFOfLocECC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_CCLocFOfLocECCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ECC2dOfExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ECCOfExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ELCC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ELCCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ELPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ELPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_EPCOfELPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_EPCOfELPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_EPCOfExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_EPCOfExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_ExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_HArray1OfPOnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_HArray1OfPOnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_HArray1OfPOnSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_HArray2OfPOnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_HArray2OfPOnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_HArray2OfPOnSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LCCache2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LCCacheOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocECC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocECCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocEPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_LocEPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_PCFOfEPCOfELPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_PCFOfEPCOfELPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_PCFOfEPCOfExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_PCFOfEPCOfExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_PCLocFOfLocEPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_PCLocFOfLocEPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_POnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_POnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfELPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfELPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPCOfPCFOfEPCOfExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPCOfPCLocFOfLocEPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPCOfPCLocFOfLocEPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfECC2dOfExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfECCOfExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfELCC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCFOfELCCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCLocFOfLocECC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SeqPOnCOfCCLocFOfLocECCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfELPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfELPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCLocFOfLocEPCOfLocateExtPC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPCOfPCLocFOfLocEPCOfLocateExtPC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfECC2dOfExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfECCOfExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfELCC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCFOfELCCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCLocFOfLocECC2dOfLocateExtCC2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSeqPOnCOfCCLocFOfLocECCOfLocateExtCC_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSequenceOfPOnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSequenceOfPOnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceNodeOfSequenceOfPOnSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>198</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceOfPOnCurv2d_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>199</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceOfPOnCurv_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>200</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\Extrema\Extrema_SequenceOfPOnSurf_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>201</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_AssemblyTable_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_HAssemblyTable_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_ListIteratorOfListOfVectors_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_ListNodeOfListOfVectors_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_ListOfVectors_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_SeqOfLinConstr_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\FEmTool\FEmTool_SequenceNodeOfSeqOfLinConstr_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\GeomLib\GeomLib_Array1OfMat_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>273</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntAna\IntAna_ListIteratorOfListOfCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>209</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntAna\IntAna_ListNodeOfListOfCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>210</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\IntAna\IntAna_ListOfCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>211</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ProjLib\ProjLib_HCompProjectedCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ProjLib\ProjLib_HProjectedCurve_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ProjLib\ProjLib_HSequenceOfHSequenceOfPnt_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ProjLib\ProjLib_SequenceNodeOfSequenceOfHSequenceOfPnt_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\drv\ProjLib\ProjLib_SequenceOfHSequenceOfPnt_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_ApproxAFunc2Var.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>234</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_ApproxF2var.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>235</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Context.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>236</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Criterion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>237</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>238</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>239</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>240</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>241</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_4.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>242</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_5.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>243</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_6.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>244</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Data_7.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>245</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Framework.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>246</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Iso.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>247</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_MathBase.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>248</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_MathBase_mathinit.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>249</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Network.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>250</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Node.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>251</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_Patch.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>252</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_SysBase.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>253</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AdvApp2Var\AdvApp2Var_SysBase_baseinit.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>254</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_ContMatrices.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_ContMatrices_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_ContMatrices_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_ContMatrices_3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_ContMatrices_4.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_Function.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_Function2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_FunctionTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppCont\AppCont_FunctionTool2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppDef\AppDef_MultiLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>286</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppDef\AppDef_MultiPointConstraint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>287</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppDef\AppDef_MyLineTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>288</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppParCurves\AppParCurves.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppParCurves\AppParCurves_ConstraintCouple.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppParCurves\AppParCurves_MultiBSpCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppParCurves\AppParCurves_MultiCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppParCurves\AppParCurves_MultiPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\AppParCurves\AppParCurves_SmoothCriterion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_Curve2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_Curve3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_CurveOnSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_CurvilinearParameter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_CurvlinFunc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_MCurvesToBSpCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_SameParameter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_SweepApproximation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Approx\Approx_SweepFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BndLib\BndLib.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>280</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BndLib\BndLib_Add2dCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>281</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BndLib\BndLib_Add3dCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>282</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BndLib\BndLib_AddSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>283</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BndLib\BndLib_Compute2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>284</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\BndLib\BndLib_Compute3d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>285</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CPnts\CPnts_AbscissaPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CPnts\CPnts_MyGaussFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CPnts\CPnts_MyRootFunction.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\CPnts\CPnts_UniformDeflection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_Curve2dTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_CurveTool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtCS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtElC.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtElC2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtElCS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtElSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtPElC.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtPElC2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtPElS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtPExtS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtPRevS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtPS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_ExtSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_FuncExtCS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_FuncExtPS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_FuncExtSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_GenExtCS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_GenExtPS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_GenExtSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_GenLocateExtCS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_GenLocateExtPS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_GenLocateExtSS.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Extrema\Extrema_POnSurf.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_Assembly.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_Curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_ElementaryCriterion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_ElementsOfRefMatrix.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_LinearFlexion.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_LinearJerk.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_LinearTension.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_ProfileMatrix.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\FEmTool\FEmTool_SparseMatrix.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeArcOfCircle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>341</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeArcOfEllipse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>342</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeArcOfHyperbola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>343</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeArcOfParabola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>344</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeCircle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>345</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeEllipse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>346</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeHyperbola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>347</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>348</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeMirror.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>349</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeParabola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>350</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeRotation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>351</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeScale.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>352</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeSegment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>353</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_MakeTranslation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>354</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCE2d\GCE2d_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>355</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeCirc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>356</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeCirc2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>357</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeCone.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>358</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeCylinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>359</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeDir.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>360</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeDir2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>361</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeElips.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>362</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeElips2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>363</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeHypr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>364</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeHypr2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>365</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeLin.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>366</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeLin2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>367</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeMirror.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>368</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeMirror2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>369</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeParab.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>370</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeParab2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>371</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakePln.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>372</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeRotation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>373</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeRotation2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>374</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeScale.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>375</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeScale2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>376</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeTranslation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>377</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_MakeTranslation2d.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>378</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\gce\gce_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>379</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCPnts\GCPnts_AbscissaPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCPnts\GCPnts_QuasiUniformAbscissa.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCPnts\GCPnts_QuasiUniformDeflection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCPnts\GCPnts_TangentialDeflection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCPnts\GCPnts_UniformAbscissa.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GCPnts\GCPnts_UniformDeflection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeArcOfCircle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>322</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeArcOfEllipse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>323</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeArcOfHyperbola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>324</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeArcOfParabola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>325</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeCircle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>326</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeConicalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>327</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeCylindricalSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>328</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeEllipse.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>329</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeHyperbola.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>330</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeLine.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>331</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeMirror.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>332</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakePlane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>333</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeRotation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>334</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeScale.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>335</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeSegment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>336</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeTranslation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>337</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeTrimmedCone.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>338</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_MakeTrimmedCylinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>339</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GC\GC_Root.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>340</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Geom2dConvert\Geom2dConvert.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>274</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Geom2dConvert\Geom2dConvert_ApproxCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>275</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Geom2dConvert\Geom2dConvert_BSplineCurveKnotSplitting.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>276</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Geom2dConvert\Geom2dConvert_BSplineCurveToBezierCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>277</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Geom2dConvert\Geom2dConvert_CompCurveToBSplineCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>278</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>224</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>225</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_ApproxCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>226</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_ApproxSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>227</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_BSplineCurveKnotSplitting.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>228</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_BSplineCurveToBezierCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>229</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_BSplineSurfaceKnotSplitting.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>230</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_BSplineSurfaceToBezierSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>231</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_CompBezierSurfacesToBSplineSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>232</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomConvert\GeomConvert_CompCurveToBSplineCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>233</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>263</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_Check2dBSplineCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>264</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_CheckBSplineCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>265</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_DenominatorMultiplier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>266</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_Interpolate.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>267</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_IsPlanarSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>268</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_LogSample.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>269</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_MakeCurvefromApprox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>270</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_PolyFunc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>271</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomLib\GeomLib_Tool.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>272</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomProjLib\GeomProjLib.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomTools\GeomTools.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>317</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomTools\GeomTools_Curve2dSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>318</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomTools\GeomTools_CurveSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>319</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomTools\GeomTools_SurfaceSet.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>320</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\GeomTools\GeomTools_UndefinedTypeHandler.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>321</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\Hermit\Hermit.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>279</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>212</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>213</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>214</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>215</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_4.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>216</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_5.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>217</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_6.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>218</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_7.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>219</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_AnaIntersection_8.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>220</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_Conic.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>221</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_IntPoint.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>222</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna2d\IntAna2d_Outils.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>223</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_Curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>202</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_Int3Pln.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>203</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_IntConicQuad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>204</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_IntLinTorus.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>205</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_IntQuadQuad.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>206</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_QuadQuadGeo.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>207</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\IntAna\IntAna_Quadric.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>208</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_CompProjectedCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_ComputeApprox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_ComputeApproxOnPolarSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_Cone.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_Cylinder.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_Plane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_PrjFunc.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_PrjResolve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_ProjectedCurve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_ProjectOnPlane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_ProjectOnSurface.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_Projector.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_Sphere.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\ProjLib\ProjLib_Torus.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

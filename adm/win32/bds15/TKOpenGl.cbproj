@@ -1,0 +1,1925 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{042A3CA5-5F88-47C6-9B7E-FA03E0E70BA1}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Library</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<ILINK_LibraryPath>..\..\..\src\OpenGl\;..\..\..\drv\OpenGl\;..\..\..\..\3rdparty\win32\freetype\objs;..\..\..\..\3rdparty\win32\ftgl\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<LinkPackageStatics>rtl.lib</LinkPackageStatics>
+			<BCC_wpro>false</BCC_wpro>
+			<BCC_PCHUsage>None</BCC_PCHUsage>
+			<BCC_PushThisFirst>true</BCC_PushThisFirst>
+			<BCC_OldOverloadRules>true</BCC_OldOverloadRules>
+			<BCC_InstructionSet>6</BCC_InstructionSet>
+			<BCC_SmartPCHCache>false</BCC_SmartPCHCache>
+			<BCC_PCHWithExternalTypeFiles>false</BCC_PCHWithExternalTypeFiles>
+			<BCC_QuietFloatingPoint>false</BCC_QuietFloatingPoint>
+			<BCC_FastFloatingPoint>false</BCC_FastFloatingPoint>
+			<Defines>WNT;CSFDB;WIN32;_WINDOWS;STRICT;HAVE_IOS;HAVE_FTGL_NEWER212;$(Defines)</Defines>
+			<IncludePath>..\..\..\src\OpenGl\;..\..\..\drv\OpenGl\;..\..\..\inc;..\..\..\..\3rdparty\win32\ftgl\src;..\..\..\..\3rdparty\win32\freetype\include;$(IncludePath)</IncludePath>
+			<OutputExt>dll</OutputExt>
+			<Multithreaded>true</Multithreaded>
+			<NoVCL>true</NoVCL>
+			<ProjectType>CppDynamicLibrary</ProjectType>
+			<AllPackageLibs>rtl.lib</AllPackageLibs>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<_TCHARMapping>char</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE</DCC_UnitAlias>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BPILibOutputDir>..\..\..\win32\bds15\libd</BPILibOutputDir>
+			<IntermediateOutputDir>..\..\..\win32\bds15\objd</IntermediateOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bind</FinalOutputDir>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;DEB=1;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>..\..\..\win32\bds15\libd;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<ILINK_LibraryPath>..\..\..\win32\bds15\lib;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<IntermediateOutputDir>..\..\..\win32\bds15\obj</IntermediateOutputDir>
+			<BPILibOutputDir>..\..\..\win32\bds15\lib</BPILibOutputDir>
+			<FinalOutputDir>..\..\..\win32\bds15\bin</FinalOutputDir>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_LightBox.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\drv\OpenGl\OpenGl_Error_0.cpp'">
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_bsurfprop.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textcolsubtitle.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_blink.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_linecontextgroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_mrkrsize.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polygonholes.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_subrs.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_viewmapping.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_deactivateview.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_ImageBox.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textzoomable.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_group.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_light_exploration.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_edgewid.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_namesetstructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_8.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_curve.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_1.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_removegroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_project_raster.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_closegroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_712.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_tmesh.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_inquirefacilities.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_contextstructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_qstrip.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_execstruct.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_remnames.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_inquireplane.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_7.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_PrimitiveArray.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_subrvis.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_begin_animation.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polygon.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_highlight.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_begin_immediat_mode.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_view.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_3.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_applid.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_pickid.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_filters.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_edgecol.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_705.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polylwid.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_2.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_intcol.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_dind.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_structure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_clearstructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_set_environment.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_begin_layer_mode.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_Extension.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_depthtest.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_antialiasing.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_degmodel.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_markercontextgroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_addnames.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_removestructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textstyle.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_dotexturemap.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_pick.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_mrkrtype.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_bezier.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_graduatedtrihedron.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_pickid.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_9.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_setplane.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_6.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_mrkr.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_txgl.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_TextureBox.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textalignment.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_backfacing.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_bezier_weight.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_703.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_edgeflag.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_boundarybox.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_triedron.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_setlight.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_facecull.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textheight.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_localtran3.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_depthcue.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_edgetyp.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textfontaspect.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_vieworientation.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_degeneratestructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_label.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_vind.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_undefined.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textangle.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_curve.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polylcol.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textfont.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_parray.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_triangle.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_view_exploration.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_funcs.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_structure_exploration.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_710.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_antialias.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_graduatedtrihedron.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_text.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_FontMgr.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_setvisualisation.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_light.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_pick.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_charspace.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_init_pick.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_print.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_quadrangle.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_TextRender.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_Memory.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_charexpan.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_AVIWriter.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_polygon.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_hlind.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polyltyp.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_plane.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_polygon_indices.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_lightstate.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_cliplimit.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_texture.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_intrefl.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_removeview.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_begin.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_polyline.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_707.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_update.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_connect.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_triedron.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_tox.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_713.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_erasestructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textcol.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_opengroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_polygon_set.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_transform_persistence.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_tsm.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_end.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_attri.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_cleargroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_unproject_raster.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_ratio_window.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_userdraw.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_intshademtd.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_textcontextgroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_indexpolygons.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_Export.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polyl.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_4.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_711.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_view.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_intstyle.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_marker_set.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_transformstructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_marker.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_highlightcolor.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_depthcueing.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_initelem.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_mrkrset.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_bintrefl.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_intstyleind.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_element_exploration.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_displaystructure.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_inquire.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_telem_util.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_surfprop.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_FrameBuffer.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_textdisplaytype.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_mrkrcol.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_facedmode.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_tgl_util.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_redraw.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_inquirelight.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_gradient_background.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_polygonoffset.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_userdraw.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_tgl_utilgr.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_5.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_polygon_holes.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_bintcol.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_disconnect.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_709.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_facecontextgroup.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_texture.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_print.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_text.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_activateview.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_transparency.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_ws.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_background.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_togl_inquireview.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!='' And '$(FileToCompile)'=='..\..\..\src\OpenGl\OpenGl_GraphicDriver_Layer.cpp'">
+			<IncludePath>..\..\..\drv\OpenGl;$(IncludePath)</IncludePath>
+			<Defines>__OpenGl_DLL;$(Defines)</Defines>
+		</PropertyGroup>
+		<ItemGroup>
+			<LibFiles Include="libraries\TKernel.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>200</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKService.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>198</BuildOrder>
+			</LibFiles>
+			<LibFiles Include="libraries\TKV3d.lib">
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>199</BuildOrder>
+			</LibFiles>
+			<CppCompile Include="..\..\..\drv\OpenGl\OpenGl_Error_0.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>197</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_addnames.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>1</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_antialias.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>2</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_applid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>3</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_attri.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>4</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_AVIWriter.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>5</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_bintcol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>6</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_bintrefl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>7</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_bsurfprop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>8</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_charexpan.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>9</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_charspace.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>10</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>11</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_degmodel.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>12</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_depthcue.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>13</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_dind.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>14</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_dotexturemap.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>15</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_edgecol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>16</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_edgeflag.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>17</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_edgetyp.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>18</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_edgewid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>19</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_execstruct.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>20</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_Extension.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>21</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_facecull.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>22</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_facedmode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>23</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_filters.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>24</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_FontMgr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>25</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_FrameBuffer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>26</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_funcs.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>27</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_graduatedtrihedron.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>28</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>29</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_1.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>30</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_2.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>31</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>32</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_4.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>33</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_5.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>34</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_6.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>35</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_7.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>36</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_703.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>37</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_705.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>38</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_707.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>39</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_709.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>40</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_710.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>41</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_711.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>42</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_712.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>43</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_713.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>44</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_8.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>45</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_9.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>46</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_Export.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>47</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_Layer.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>48</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_GraphicDriver_print.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>49</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_highlight.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>50</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_hlind.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>51</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_ImageBox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>52</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_indexpolygons.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>53</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_initelem.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>54</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_inquire.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>55</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_intcol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>56</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_intrefl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>57</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_intshademtd.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>58</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_intstyle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>59</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_intstyleind.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>60</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_label.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>61</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_LightBox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>62</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_lightstate.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>63</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_localtran3.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>64</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_Memory.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>65</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_mrkr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>66</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_mrkrcol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>67</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_mrkrset.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>68</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_mrkrsize.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>69</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_mrkrtype.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>70</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_pick.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>71</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_pickid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>72</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polygon.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>73</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polygonholes.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>74</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polygonoffset.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>75</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polyl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>76</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polylcol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>77</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polyltyp.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>78</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_polylwid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>79</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_PrimitiveArray.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>80</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_qstrip.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>81</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_remnames.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>82</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_subrs.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>83</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_subrvis.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>84</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_surfprop.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>85</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_telem_util.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>86</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_text.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>87</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textalignment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>88</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textangle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>89</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textcol.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>90</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textcolsubtitle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>91</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textdisplaytype.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>92</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textfont.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>93</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textfontaspect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>94</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textheight.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>95</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_TextRender.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>96</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textstyle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>97</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_texture.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>98</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_TextureBox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>99</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_textzoomable.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>100</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_tgl_util.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>101</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_tgl_utilgr.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>102</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_tmesh.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>103</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_activateview.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>104</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_antialiasing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>105</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_backfacing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>106</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_background.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>107</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_begin.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>108</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_begin_animation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>109</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_begin_immediat_mode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>110</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_begin_layer_mode.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>111</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_bezier.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>112</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_bezier_weight.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>113</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_blink.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>114</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_boundarybox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>115</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_cleargroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>116</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_clearstructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>117</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_cliplimit.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>118</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_closegroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>119</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_connect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>120</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_contextstructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>121</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_curve.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>122</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_deactivateview.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>123</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_degeneratestructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>124</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_depthcueing.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>125</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_depthtest.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>126</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_disconnect.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>127</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_displaystructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>128</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_element_exploration.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>129</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_end.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>130</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_erasestructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>131</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_facecontextgroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>132</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_gradient_background.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>133</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_graduatedtrihedron.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>134</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_group.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>135</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_highlightcolor.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>136</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_init_pick.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>137</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_inquirefacilities.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>138</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_inquirelight.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>139</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_inquireplane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>140</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_inquireview.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>141</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_light.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>142</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_light_exploration.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>143</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_linecontextgroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>144</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_marker.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>145</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_markercontextgroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>146</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_marker_set.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>147</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_namesetstructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>148</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_opengroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>149</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_parray.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>150</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_pick.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>151</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_pickid.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>152</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_plane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>153</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_polygon.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>154</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_polygon_holes.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>155</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_polygon_indices.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>156</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_polygon_set.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>157</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_polyline.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>158</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_print.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>159</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_project_raster.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>160</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_quadrangle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>161</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_ratio_window.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>162</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_redraw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>163</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_removegroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>164</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_removestructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>165</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_removeview.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>166</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_setlight.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>167</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_setplane.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>168</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_setvisualisation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>169</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_set_environment.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>170</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_structure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>171</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_structure_exploration.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>172</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_text.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>173</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_textcontextgroup.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>174</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_texture.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>175</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_transformstructure.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>176</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_transparency.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>177</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_triangle.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>178</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_triedron.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>179</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_unproject_raster.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>180</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_update.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>181</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_userdraw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>182</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_view.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>183</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_viewmapping.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>184</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_vieworientation.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>185</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_togl_view_exploration.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>186</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_tox.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>187</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_transform_persistence.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>188</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_triedron.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>189</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_tsm.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>190</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_txgl.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>191</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_undefined.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>192</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_userdraw.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>193</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_view.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>194</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_vind.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>195</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<CppCompile Include="..\..\..\src\OpenGl\OpenGl_ws.cpp">
+				<HasBuildEvent>true</HasBuildEvent>
+				<BuildOrder>196</BuildOrder>
+				<OptionOverrides>true</OptionOverrides>
+			</CppCompile>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
